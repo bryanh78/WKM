@@ -1,0 +1,37 @@
+.house, .background{
+	height:900px;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	background-color: black;
+}
+.start {
+	bottom: 180px;
+	width: 33%;
+}
+.options {
+	bottom: 140px;
+	width: 33%;
+}
+.header {
+	color: white;
+	top: 20px;
+}
+.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back{
+	position: absolute;
+}
+.hallBackRight {
+	top:320px;
+}
+.hallBackLeft {
+	top:180px;
+}
+.hallFrontRight {
+	bottom: 400px;
+}
+.hallFrontLeft {
+	bottom: 350px;
+}
+.back {
+	bottom: 50px
+}
