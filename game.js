@@ -17,9 +17,9 @@ angular.module("game")
 			// 	console.log(items)
 			// 	s.bag = 
 			// }
-			s.interact=function(event){
-				console.log(event)
-				s.selectedThing.push(event)
+			s.interact=function(thing){
+				console.log(thing)
+				s.selectedThing = thing
 				console.log(s.selectedThing)
 			}
 
@@ -63,6 +63,7 @@ angular.module("game")
 				return s.activeRooms
 			}
 
+			// http://www.lovethesepics.com/2012/10/hauntingly-beautiful-abandoned-europe-meet-urbex-master-andre-govia/
 			s.screen = {
 				mainScreen : {
 					img : "http://vignette2.wikia.nocookie.net/creepypasta/images/0/01/Creepy_house-wallpaper-1600x900.jpg/revision/latest?cb=20121007054213"
@@ -84,6 +85,24 @@ angular.module("game")
 				},
 				frontroom : {
 					img : "http://41.media.tumblr.com/625f3e51caeebec12ccaa6fe242de834/tumblr_nldtcaPnk11s1vn29o1_500.jpg"
+				},
+				basement : {
+					img :"http://www.adventured.co/wp-content/uploads/2015/04/creepy-basement-and-creepy-basement-5.jpg"
+				},
+				vault : {
+					img : "http://i.imgur.com/v6PYXYw.jpg"
+				},
+				furnace : {
+					img : "http://i.imgur.com/Rau7e4x.jpg"
+				},
+				secondfloor : {
+					img : "http://i.dailymail.co.uk/i/pix/2014/03/27/article-2590567-1C9B5D6F00000578-365_964x624.jpg"
+				},
+				bedroom : {
+					img : "http://www.lovethesepics.com/wp-content/uploads/2012/10/The-master-bedroom.jpg"
+				},
+				junkroom : {
+					img : "http://www.lovethesepics.com/wp-content/uploads/2012/10/Ghost-house-a-real-creepy-room-in-the-abandoned-manor-house.jpg"
 				}
 			}
 

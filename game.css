@@ -3,6 +3,7 @@
 }*/
 
 .house{
+	width: 960px;
 	height: 900px;
 	background-size: 100% 100%;
 	position: relative;
@@ -20,11 +21,20 @@
 	color: white;
 	top: 20px;
 }
-.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .key, .invin {
+.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .key, .invin, .up, .down, .vault, .furnace, .secondfloor, .bedroom, .junkroom {
 	position: absolute;
 }
 .invin {
 	bottom:880px;
+}
+.bedroom {
+	bottom:600px;
+}
+.junkroom {
+	bottom: 500px;
+}
+.vault, .furnace {
+	bottom: 500px;
 }
 .hallBackRight {
 	top:320px;
@@ -40,6 +50,12 @@
 }
 .back {
 	bottom: 50px;
+}
+.up {
+	bottom: 600px;
+}
+.down {
+	bottom:200px;
 }
 .key {
 	top: 500px;

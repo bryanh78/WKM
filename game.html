@@ -23,7 +23,7 @@
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="inventory">
 					<li ng-repeat="thing in person">
-						<a href="#" ng-click="interact(thing)" data-toggle="modal" data-target=".bs-example-modal-sm">{{thing.name}}</a>
+						<a href="#" ng-click="interact(thing)" data-toggle="modal" data-target=".bs-example-modal-sm">   {{thing.name}}</a>
 						
 					</li>
 				</ul>
@@ -31,6 +31,9 @@
 
 			<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 				<div class="modal-dialog modal-sm">
+				<!-- <div class="modal-header">
+					<h1 class="">{{selectedThing.name}}</h1>
+				</div> -->
 					<div class="modal-content">
      					 {{selectedThing.description}}
 					</div>
@@ -69,16 +72,31 @@
 				<button ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
 			<!-- stairs -->
 				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-4 up" ng-click="changeRoom('secondfloor')" >Second Floor</button>
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-6 down" ng-click="changeRoom('basement')" >Basement</button>
 			<!-- dining -->
 				<button ng-show = "activeRooms === 'dining'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
 			<!-- front room -->
 				<button ng-show = "activeRooms === 'frontroom'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
 				</div>
+			<!-- basement -->
+				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('stairs')" >Stairs</button>
+				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-2 vault" ng-click="changeRoom('vault')" >Vault</button>
+				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-8 furnace" ng-click="changeRoom('furnace')" >Furnace</button>
+			<!-- vault -->
+				<button ng-show = "activeRooms === 'vault'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('basement')" >Basement</button>
+			<!-- furnace -->
+				<button ng-show = "activeRooms === 'furnace'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('basement')" >Basement</button>
+			<!-- upstairs -->
+				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('stairs')" >Stairs</button>
+				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-4 bedroom" ng-click="changeRoom('bedroom')" >Bedroom</button>
+				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-7 junkroom" ng-click="changeRoom('junkroom')" >Junkroom</button>
+			<!-- bedroom -->
+				<button ng-show = "activeRooms === 'bedroom'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('secondfloor')" >Second Floor</button>
+			<!-- junkroom -->
+				<button ng-show = "activeRooms === 'junkroom'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('secondfloor')" >Second Floor</button>
 
-				
-			
 
-		
 		</div>
 	</div>
 	
