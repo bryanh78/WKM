@@ -21,26 +21,45 @@
 	color: white;
 	top: 20px;
 }
-.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .key, .invin, .up, .down, .vault, .furnace, .secondfloor, .bedroom, .junkroom {
+.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .key, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright {
 	position: absolute;
+}
+.kitchenleft {
+	bottom: 180px;
+}
+.diningright {
+	bottom: 550px;
+}
+.libraryright {
+	bottom: 300px;
 }
 .invin {
 	bottom:880px;
 }
-.bedroom {
-	bottom:600px;
-}
-.junkroom {
+.dark {
 	bottom: 500px;
+	color: white;
 }
-.vault, .furnace {
+.secondfloorleft {
+	bottom: 260px;
+}
+.secondfloorbackleft, .secondfloorbackright {
+	bottom:350px;
+}
+.secondfloorright {
+	bottom: 300px;
+}
+.basementvault {
+	bottom: 550px;
+} 
+.basementfurnace {
 	bottom: 500px;
 }
 .hallBackRight {
 	top:320px;
 }
 .hallBackLeft {
-	top:180px;
+	top:220px;
 }
 .hallFrontRight {
 	bottom: 400px;
@@ -51,11 +70,11 @@
 .back {
 	bottom: 50px;
 }
-.up {
+.stairsup {
 	bottom: 600px;
 }
-.down {
-	bottom:200px;
+.stairsdown {
+	bottom:300px;
 }
 .key {
 	top: 500px;

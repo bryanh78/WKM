@@ -23,7 +23,7 @@
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="inventory">
 					<li ng-repeat="thing in person">
-						<a href="#" ng-click="interact(thing)" data-toggle="modal" data-target=".bs-example-modal-sm">   {{thing.name}}</a>
+						<a href="#" ng-click="interact(thing)" data-toggle="modal" data-target=".bs-example-modal-sm">{{thing.name}}</a>
 						
 					</li>
 				</ul>
@@ -35,7 +35,15 @@
 					<h1 class="">{{selectedThing.name}}</h1>
 				</div> -->
 					<div class="modal-content">
-     					 {{selectedThing.description}}
+					<div class="modal-header">
+						<h3 class="modal-title">{{selectedThing.name}}</h3>
+					</div>
+     					 <span ng-show="!flip">{{selectedThing.description}}</span>
+     					 <span ng-show="flip">{{selectedThing.back}}</span>
+					<div ng-show="backcheck()" class="modal-footer">
+        				<button type="button" ng-show="!flip" ng-click="turn(true)" class="btn btn-primary">Back Side</button>
+        				<button type="button" ng-show="flip" ng-click="turn(true)" class="btn btn-primary">Front Side</button>
+      				</div>
 					</div>
 				</div>
 			</div> 
@@ -47,14 +55,17 @@
 				</div>
 			<!-- ITEMS -->
 			<!-- key -->
-				<div ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-6 key" ng-click="collect(items.key)"></div>
+				<div ng-show = "supplycheck(person,'Small Key') && activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-6 key" ng-click="collect(items.key)"></div>
 			<!-- flashlight -->
-				<div ng-show = "activeRooms === 'frontroom'" class="col-xs-1 col-xs-offset-5 flashlight" ng-click="collect(items.flashlight)"></div>
+				<div ng-show = "supplycheck(person,'Flashlight') && activeRooms === 'frontroom'" class="col-xs-1 col-xs-offset-5 flashlight" ng-click="collect(items.flashlight)"></div>
 			<!-- firstnote -->
-				<div ng-show = "activeRooms === 'dining'" class="col-xs-2 col-xs-offset-0 firstnote" ng-click="collect(items.firstnote)"></div>
-				<!-- <div ng-show = "activeRooms === ''" class="col-xs-1 col-xs-offset-6 secondnote" ng-click=""></div>
+				<div ng-show = "supplycheck(person,'Note 1') && activeRooms === 'dining'" class="col-xs-2 col-xs-offset-0 firstnote" ng-click="collect(items.firstnote)"></div>
+			<!-- secondnote -->
+				<div ng-show = "activeRooms === ''" class="col-xs-1 col-xs-offset-6 secondnote" ng-click=""></div>
+			<!-- thirdnote -->
 				<div ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-6 thirdnote" ng-click=""></div>
- -->				</div>
+
+				</div>
 			<div class="row">
 			<!-- Rooms -->
 			<!-- MAIN SCREEN -->
@@ -70,32 +81,44 @@
 				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('door')" >Door</button>
 			<!-- kitchen -->
 				<button ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
+				<button ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-1 kitchenleft" ng-click="changeRoom('dining')" >Dining</button>
 			<!-- stairs -->
 				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
-				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-4 up" ng-click="changeRoom('secondfloor')" >Second Floor</button>
-				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-6 down" ng-click="changeRoom('basement')" >Basement</button>
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-3 stairsup" ng-click="changeRoom('secondfloor')" >Second Floor1</button>
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-8 stairsup" ng-click="changeRoom('library')" >Second Floor2</button>
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-6 stairsdown" ng-click="light()" >Basement</button>
 			<!-- dining -->
 				<button ng-show = "activeRooms === 'dining'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
+				<button ng-show = "activeRooms === 'dining'" class="col-xs-1 col-xs-offset-8 diningright" ng-click="changeRoom('kitchen')" >Kitchen</button>
 			<!-- front room -->
 				<button ng-show = "activeRooms === 'frontroom'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
 				</div>
+			<!-- black -->
+				<button ng-show = "activeRooms === 'black'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('stairs')" >Stairs</button>
+				<div ng-show = "activeRooms === 'black'" class="col-xs-4 col-xs-offset-4 dark">ITS TOO DARK I CAN'T SEE A THING.</div>
 			<!-- basement -->
 				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('stairs')" >Stairs</button>
-				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-2 vault" ng-click="changeRoom('vault')" >Vault</button>
-				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-8 furnace" ng-click="changeRoom('furnace')" >Furnace</button>
+				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-5 basementvault" ng-click="changeRoom('vault')" >Vault</button>
+				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-10 basementfurnace" ng-click="changeRoom('furnace')" >Furnace</button>
 			<!-- vault -->
 				<button ng-show = "activeRooms === 'vault'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('basement')" >Basement</button>
 			<!-- furnace -->
 				<button ng-show = "activeRooms === 'furnace'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('basement')" >Basement</button>
 			<!-- upstairs -->
-				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('stairs')" >Stairs</button>
-				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-4 bedroom" ng-click="changeRoom('bedroom')" >Bedroom</button>
-				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-7 junkroom" ng-click="changeRoom('junkroom')" >Junkroom</button>
+				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('library')" >library</button>
+				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-1 secondfloorleft" ng-click="changeRoom('stairs')" >Stairs</button>
+				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-4 secondfloorbackleft" ng-click="changeRoom('bedroom')" >Bedroom</button>
+				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-6 secondfloorbackleft" ng-click="changeRoom('kidsroom')" >Kids Room</button>
+				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-7 secondfloorright" ng-click="changeRoom('junkroom')" >Junkroom</button>
+			<!-- library -->
+				<button ng-show = "activeRooms === 'library'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('secondfloor')" >second floor</button>
+				<button ng-show = "activeRooms === 'library'" class="col-xs-1 col-xs-offset-9 libraryright" ng-click="changeRoom('stairs')" >Stairs</button>
 			<!-- bedroom -->
 				<button ng-show = "activeRooms === 'bedroom'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('secondfloor')" >Second Floor</button>
 			<!-- junkroom -->
 				<button ng-show = "activeRooms === 'junkroom'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('secondfloor')" >Second Floor</button>
-
+			<!-- kidsroom -->
+				<button ng-show = "activeRooms === 'kidsroom'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('secondfloor')" >Second Floor</button>
 
 		</div>
 	</div>
