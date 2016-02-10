@@ -1,7 +1,10 @@
-.house, .background{
-	height:900px;
-	min-height: 100%;
-	width: 100%;
+/*.container-fluid {
+	padding: 0;
+}*/
+
+.house{
+	height: 900px;
+	background-size: 100% 100%;
 	position: relative;
 	background-color: black;
 }
@@ -17,8 +20,11 @@
 	color: white;
 	top: 20px;
 }
-.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back{
+.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .key, .invin {
 	position: absolute;
+}
+.invin {
+	bottom:880px;
 }
 .hallBackRight {
 	top:320px;
@@ -33,5 +39,33 @@
 	bottom: 350px;
 }
 .back {
-	bottom: 50px
+	bottom: 50px;
+}
+.key {
+	top: 500px;
+	background-color: red;
+	padding: 25px;
+}
+.flashlight {
+	bottom: 380px;
+	background-color: red;
+	padding: 25px;
+}
+.firstnote {
+	bottom: 20em;
+	background-color: red;
+	padding: 25px;
+	width: 50px;
+	margin-left: 65px;
+	height: 70px
+}
+.secondnote {
+	top: 500px;
+	background-color: red;
+	padding: 25px;
+}
+.thirdnote {
+	top: 500px;
+	background-color: red;
+	padding: 25px;
 }

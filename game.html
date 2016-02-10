@@ -2,33 +2,67 @@
 <html ng-app="game">
 <head>
 	<title>Game</title>
+
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="game.css">
+	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
 	<script type="text/javascript" src="game.js"></script>
-	<link rel="stylesheet" type="text/css" href="game.css">
+	
 </head>
 <body ng-controller = "scary">
 	<div  class = "container-fluid">
+
 		
 		<div class = "row">
-				
-			<div class = "col-xs-12 background">
 				<img class = "img-responsive house" ng-src = "{{screen[activeRooms].img}}">
+
+			<div class="dropdown invin">
+				<button id="inventory" type="button" ng-hide = "activeRooms==='mainScreen'"  aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Inventory
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="inventory">
+					<li ng-repeat="thing in person">
+						<a href="#" ng-click="interact(thing)" data-toggle="modal" data-target=".bs-example-modal-sm">{{thing.name}}</a>
+						
+					</li>
+				</ul>
+			</div>
+
+			<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+     					 {{selectedThing.description}}
+					</div>
+				</div>
+			</div> 
+
 
 			<div class="col-xs-4 col-xs-offset-4 header" ng-show = "activeRooms === 'mainScreen'">
 					<h1>Haunted House</h1>
-					<p class = "col-xs-offset-3">(spooky stuff man)</p>
-
+					<p class = "col-xs-offset-2">(spooky stuff man)</p>
 				</div>
+			<!-- ITEMS -->
+			<!-- key -->
+				<div ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-6 key" ng-click="collect(items.key)"></div>
+			<!-- flashlight -->
+				<div ng-show = "activeRooms === 'frontroom'" class="col-xs-1 col-xs-offset-5 flashlight" ng-click="collect(items.flashlight)"></div>
+			<!-- firstnote -->
+				<div ng-show = "activeRooms === 'dining'" class="col-xs-2 col-xs-offset-0 firstnote" ng-click="collect(items.firstnote)"></div>
+				<!-- <div ng-show = "activeRooms === ''" class="col-xs-1 col-xs-offset-6 secondnote" ng-click=""></div>
+				<div ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-6 thirdnote" ng-click=""></div>
+ -->				</div>
+			<div class="row">
+			<!-- Rooms -->
 			<!-- MAIN SCREEN -->
 				<button ng-show = "activeRooms === 'mainScreen'" class = "col-xs-4 col-xs-offset-4 btn btn-danger btn-block start" ng-click="changeRoom('door')">-START-</button>
 				<button ng-show = "activeRooms === 'mainScreen'" class = "col-xs-4 col-xs-offset-4 btn btn-info btn-block options">-OPTIONS-</button>
 			<!-- DOORWAY -->
 				<button ng-show = "activeRooms === 'door'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
 			<!-- MAIN HALLWAY -->
-				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-7 hallBackRight" ng-click="changeRoom('kitchen')">Kitchen</button>
+				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-8 hallBackRight" ng-click="changeRoom('kitchen')">Kitchen</button>
 				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-6 hallBackLeft" ng-click="changeRoom('stairs')">Stairs</button>
-				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-8 hallFrontRight" ng-click="changeRoom('dining')">Dining</button>
+				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-9 hallFrontRight" ng-click="changeRoom('dining')">Dining</button>
 				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-4 hallFrontLeft" ng-click="changeRoom('frontroom')">Front Room</button>
 				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('door')" >Door</button>
 			<!-- kitchen -->
@@ -39,15 +73,16 @@
 				<button ng-show = "activeRooms === 'dining'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
 			<!-- front room -->
 				<button ng-show = "activeRooms === 'frontroom'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
-			</div>
-			</div>
-		
+				</div>
+
+				
 			
 
 		
 		</div>
 	</div>
 	
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
 </body>
 </html>
