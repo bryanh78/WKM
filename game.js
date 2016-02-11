@@ -2,13 +2,160 @@ angular.module("game", [])
 
 angular.module("game")
 	.controller("scary", 
-		["$scope", function($scope){
+		["$scope","$interval","$timeout", function($scope, $interval,$timeout){
 
 			var s = $scope
 			s.activeRooms = "mainScreen"
 			s.person = []
 			s.selectedThing = []
+			s.introMusic = $('#introMusic')[0]
+			s.door = $('#door')[0]
+			s.glass = $('#glass')[0]
+			s.scare = $('#scare')[0]
+			s.clock = $('#clock')[0]
+			s.run = $('#run')[0]
+			s.death = $('#death')[0]
+			s.piano = $('#piano')[0]
 
+			s.deaththing = function () {
+				s.changeRoom('deathface')
+				s.death.play()
+				$interval.cancel(s.finalSoundsinterval)
+				$interval.cancel(s.scarysoundsinterval)
+				while (s.person.length > 0) {
+					s.person.pop()
+				}
+			}
+
+			s.codebox = function() {
+				s.codecheck = parseInt(prompt('Please Enter Code'));
+				console.log(s.codecheck)
+				if (s.codecheck === 175438266) {
+					s.changeRoom('freedom')
+					$interval.cancel(s.finalSoundsinterval)
+				}
+			}
+
+			s.introPiano = function() {
+				s.changeRoom('junkroom')
+				s.piano.play()
+			}
+
+			s.junkleave = function() {
+				s.changeRoom('secondfloor')
+				s.piano.pause()
+			}
+
+			s.introClock = function() {
+				s.changeRoom('dining')
+				s.clock.play()
+			}
+
+			s.retry = function() {
+				s.changeRoom('mainScreen')
+				s.death.pause()
+				s.introMusic.play()
+			}
+
+			s.diningHall = function() {
+				s.changeRoom('mainHall')
+				s.clock.pause()
+			}
+			s.diningKitchen = function() {
+				s.changeRoom('kitchen')
+				s.clock.pause()
+			}
+
+			s.deathrun = function() {
+				s.hidehole = true
+				$timeout(function() {
+					if (s.activeRooms === 'underbed' || s.activeRooms === 'closet' || s.activeRooms === 'coffin') {
+						s.hidehole = false
+						} else {
+							var neckcheck = false
+							s.person.forEach(function(element) {
+								var index = s.person.indexOf(element)
+								if (element.name==='Necklace') {
+									neckcheck = true
+									s.person.splice(index,1)
+									console.log('gamejs 61',s.person)
+								}
+							})
+							if (!neckcheck){
+								s.changeRoom('deathface')
+								s.death.play()
+								$interval.cancel(s.finalSoundsinterval)
+								while (s.person.length > 0) {
+									s.person.pop()
+								}
+							}
+						}
+				}, 28000)
+			}
+
+			s.endtimes = function() {
+				s.finalCountdown
+			}
+
+			s.finalCountdown = function() {
+				s.finalCountinterval = $interval(function(){
+					$interval.cancel(s.finalSoundsinterval)
+					var timer = Math.random()
+					if (0<timer&&timer<0.5) {
+						s.run.play()
+						s.deathrun()
+
+					}
+				},29000)
+			}
+
+			s.gametime = function() {
+				s.finalSounds()
+			}
+
+			s.finalSounds = function() {
+				s.finalSoundsinterval = $interval(function(){
+					$interval.cancel(s.scarysoundsinterval)
+					var timer = Math.random()
+					if (0<timer&&timer<0.1) {
+						s.door.play()
+					} else if (0.11<timer&&timer<0.2) {
+						s.glass.play()
+					} else if (0.21<timer&&timer<0.3) {
+						s.scare.play()
+					} else if (0.31<timer&&timer<0.4) {
+						s.run.play()
+						s.deathrun()
+
+					}
+				},32000)
+			}
+
+			s.scarySounds = function() {
+				s.scarysoundsinterval = $interval(function(){
+					var timer = Math.random()
+					if (0<timer&&timer<0.15) {
+						s.door.play()
+					} else if (0.16<timer&&timer<0.3) {
+						s.glass.play()
+					} else if (0.31<timer&&timer<0.46) {
+						s.scare.play()
+					}
+				},43000)  
+			}
+
+			s.start = function() {
+				s.changeRoom('door')
+				s.introMusic.pause()
+			}
+
+			
+			s.introsound = function() {
+				if (s.activeRooms==='mainScreen') {
+					s.introMusic.play()
+				}
+			}
+			s.introsound()
 			s.turn = function(flip) {
 				s.flip=!s.flip;
 				return s.flip;
@@ -86,10 +233,18 @@ angular.module("game")
 					back : "-R... ooookkkk? U.N.R? or maybe it's...-"
 				},
 				necklace : {
-
+					name : "Necklace",
+					holding : true,
+					description : "-This looks beautiful. and ancient. hmmm it seems to almost glow.-"
 				},
 				vaultKey : {
-
+					name : "Heavy Key",
+					holding : true,
+					description : "-Now this is a key! I must be to something big.-"
+				},
+				death : {
+					name : "death",
+					holding : true,
 				}
 			}
 
@@ -151,28 +306,23 @@ angular.module("game")
 				},
 				kidsroom : {
 					img : "http://www.lovethesepics.com/wp-content/uploads/2012/10/Youre-not-afraid-of-the-dark-are-you-Creepy-carriage-at-spooky-abandoned-manor-house.jpg"
+				},
+				underbed : {
+					img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuFEvdW9-e4eDL4em5gUWAKXGTwVZ3j3E6VVn25eyFIHu4HsMipA"
+				},
+				closet : {
+					img : "http://www.masterheartmagazine.com/collaborators/Giuffre-Heitzner_Anna-Marie/_images/Light-Through-Door.gif"
+				},
+				coffin : {
+					img : "https://s-media-cache-ak0.pinimg.com/736x/46/ec/7d/46ec7d02c7f60790ac164baad8cd8a13.jpg"
+				},
+				deathface : {
+					img : "https://i.ytimg.com/vi/Yqh6CFMltWU/hqdefault.jpg"
+				},
+				freedom : {
+					img : "https://upload.wikimedia.org/wikipedia/commons/5/5d/Open_Field_Sutton_Park.jpg"
 				}
 
 			}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }])

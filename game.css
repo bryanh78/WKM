@@ -21,8 +21,20 @@
 	color: white;
 	top: 20px;
 }
-.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .key, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright {
+.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
 	position: absolute;
+}
+.vaultkey, .death, .key, .secondnote, .thirdnote, .necklace, .firstnote {
+	position: absolute;
+}
+.bedroomhide {
+	bottom: 250px;
+}
+.basementhide {
+	bottom: 200px;
+}
+.kitchenhide {
+	bottom: 350px;
 }
 .kitchenleft {
 	bottom: 180px;
@@ -87,12 +99,9 @@
 	padding: 25px;
 }
 .firstnote {
-	bottom: 20em;
+	bottom: 600px;
 	background-color: red;
 	padding: 25px;
-	width: 50px;
-	margin-left: 65px;
-	height: 70px
 }
 .secondnote {
 	top: 500px;
@@ -100,6 +109,21 @@
 	padding: 25px;
 }
 .thirdnote {
+	top: 500px;
+	background-color: red;
+	padding: 25px;
+}
+.necklace {
+	top: 500px;
+	background-color: red;
+	padding: 25px;
+}
+.vaultkey {
+	top: 500px;
+	background-color: red;
+	padding: 25px;
+}
+.death {
 	top: 500px;
 	background-color: red;
 	padding: 25px;
