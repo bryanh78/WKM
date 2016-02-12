@@ -94,7 +94,7 @@ angular.module("game")
 			}
 
 			s.endtimes = function() {
-				s.finalCountdown
+				s.finalCountdown()
 			}
 
 			s.finalCountdown = function() {

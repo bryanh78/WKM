@@ -1,6 +1,9 @@
 /*.container-fluid {
 	padding: 0;
 }*/
+.size {
+	width: 960px;
+}
 
 .house{
 	width: 960px;
