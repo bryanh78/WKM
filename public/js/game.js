@@ -155,7 +155,7 @@ angular.module("game")
 					s.introMusic.play()
 				}
 			}
-			s.introsound()
+			// s.introsound()
 			s.turn = function(flip) {
 				s.flip=!s.flip;
 				return s.flip;

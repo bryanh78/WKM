@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stairs</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="game.css">
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+	<script type="text/javascript" src="game.js"></script>
+	
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+
+<!-- stairs -->
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-3 stairsup" ng-click="changeRoom('secondfloor')" >Second Floor1</button>
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-8 stairsup" ng-click="changeRoom('library')" >Second Floor2</button>
+				<button ng-show = "activeRooms === 'stairs'" class="col-xs-1 col-xs-offset-6 stairsdown" ng-click="light()" >Basement</button>
+
+			
+	</div>
+</div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+</body>
+</html>
