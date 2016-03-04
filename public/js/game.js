@@ -5,7 +5,8 @@ angular.module("game")
 		["$scope","$interval","$timeout", function($scope, $interval,$timeout){
 
 			var s = $scope
-			s.activeRooms = "mainScreen"
+			// var h = $http
+			// s.activeRooms = "mainScreen"
 			s.person = []
 			s.selectedThing = []
 			s.introMusic = $('#introMusic')[0]
@@ -29,7 +30,7 @@ angular.module("game")
 
 			s.codebox = function() {
 				s.codecheck = parseInt(prompt('Please Enter Code'));
-				console.log(s.codecheck)
+				// console.log(s.codecheck)
 				if (s.codecheck === 175438266) {
 					s.changeRoom('freedom')
 					$interval.cancel(s.finalSoundsinterval)
@@ -274,7 +275,7 @@ angular.module("game")
 				dining : {
 					img : "http://i.dailymail.co.uk/i/pix/2013/04/30/article-2316987-198AAE6A000005DC-733_964x634.jpg"
 				},
-				frontroom : {
+				livingroom : {
 					img : "http://41.media.tumblr.com/625f3e51caeebec12ccaa6fe242de834/tumblr_nldtcaPnk11s1vn29o1_500.jpg"
 				},
 				basement : {

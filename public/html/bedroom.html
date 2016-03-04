@@ -3,27 +3,27 @@
 <head>
 	<title>Bedroom</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../game.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="../game.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
 	
 </head>
 <body ng-controller = "scary">
 <div class="container-fluid">
-	<div class="row">
-		<img class = "img-responsive " ng-src = "{{screen.bedroom.img}}">
+	<div class="row house">
+		<img class = "img-responsive house" ng-src = "{{screen.bedroom.img}}">
 	
 
-			<div class="row">
+			<!-- <div class="row"> -->
 			
 	
 <!-- bedroom -->
-				<button class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('secondfloor')" >Second Floor</button>
-				<button class="col-xs-1 col-xs-offset-10 secondfloorleft" ng-click="changeRoom('kidsroom')" >Kids Room</button>
-				<button class="col-xs-1 col-xs-offset-6 btn btn-danger bedroomhide" ng-click="changeRoom('underbed')" >HIDE</button>
-			</div>
-	</div>
+				<button class="back" ng-click="changeRoom('secondfloor')" >Second Floor</button>
+				<button class="secondfloorleft" ng-click="changeRoom('kidsroom')" >Kids Room</button>
+				<button class="btn btn-danger bedroomhide" ng-click="changeRoom('underbed')" >HIDE</button>
+			<!-- </div>
+ -->	</div>
 </div>
 
 <!-- ng-show = "hidehole"  -->

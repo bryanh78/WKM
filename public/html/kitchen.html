@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='game'>
 <head>
 	<title>Kitchen</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="game.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
 	
 </head>
-<body>
+<body ng-controller='scary'>
 <div class="container-fluid">
 	<div class="row">
-	
+		<img class = "img-responsive house" ng-src = "{{screen.kitchen.img}}">	
 <!-- kitchen -->
-				<button ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('mainHall')" >Hallway</button>
-				<button ng-show = "activeRooms === 'kitchen'" class="col-xs-1 col-xs-offset-1 kitchenleft" ng-click="introClock()" >Dining</button>
-				<button ng-show = "activeRooms === 'kitchen' && hidehole" class="col-xs-1 col-xs-offset-8 btn btn-danger kitchenhide" ng-click="changeRoom('closet')" >HIDE</button>
+				<button class="back" ng-click="changeRoom('mainHall')" >Hallway</button>
+				<button class="kitchenleft" ng-click="introClock()" >Dining</button>
+				<button class=" btn btn-danger kitchenhide" ng-click="changeRoom('closet')" >HIDE</button>
 		
 	</div>
 </div>

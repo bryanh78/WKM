@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='game'>
 <head>
 	<title>Main Screen</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="game.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
 	
 </head>
-<body>
+<body ng-controller='scary'>
 <div class="container-fluid">
 	<div class="row">
-	
+		<img class = "img-responsive house" ng-src = "{{screen.mainScreen.img}}">	
 <!-- MAIN SCREEN -->
-				<button ng-show = "activeRooms === 'mainScreen'" class = "col-xs-4 col-xs-offset-4 btn btn-danger btn-block start" ng-click="start(); scarySounds()">-START-</button>
-				<button ng-show = "activeRooms === 'mainScreen'" class = "col-xs-4 col-xs-offset-4 btn btn-info btn-block options">-OPTIONS-</button>
+				<div class="header">
+					<h1>Haunted House</h1>
+					<p class="header">(spooky stuff man)</p>
+				</div>
+				<button class = "btn btn-danger btn-block start" ng-click="start(); scarySounds()">-START-</button>
+				<button class = "btn btn-info btn-block options">-OPTIONS-</button>
 		
 	</div>
 </div>

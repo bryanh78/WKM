@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='game'>
 <head>
 	<title>Second Floor</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="game.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
 	
 </head>
-<body>
+<body ng-controller='scary'>
 <div class="container-fluid">
 	<div class="row">
-		
+		<img class = "img-responsive house" ng-src = "{{screen.secondfloor.img}}">		
 <!-- upstairs -->
-				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('library')" >library</button>
-				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-1 secondfloorleft" ng-click="changeRoom('stairs')" >Stairs</button>
-				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-4 secondfloorbackleft" ng-click="changeRoom('bedroom')" >Bedroom</button>
-				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-6 secondfloorbackleft" ng-click="changeRoom('kidsroom')" >Kids Room</button>
-				<button ng-show = "activeRooms === 'secondfloor'" class="col-xs-1 col-xs-offset-7 secondfloorright" ng-click="introPiano()" >Junkroom</button>
+				<button class="back" ng-click="changeRoom('library')" >library</button>
+				<button class="secondfloorleft" ng-click="changeRoom('stairs')" >Stairs</button>
+				<button class="secondfloorbackleft" ng-click="changeRoom('bedroom')" >Bedroom</button>
+				<button class="secondfloorbackleft" ng-click="changeRoom('kidsroom')" >Kids Room</button>
+				<button class="secondfloorright" ng-click="introPiano()" >Junkroom</button>
 			
 	</div>
 </div>

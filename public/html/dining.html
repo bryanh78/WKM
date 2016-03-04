@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='game'>
 <head>
 	<title>Dining</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="game.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
 	
 </head>
-<body>
+<body ng-controller='scary'>
 <div class="container-fluid">
 	<div class="row">
-
+		<img class = "img-responsive house" ng-src = "{{screen.dining.img}}">
 <!-- dining -->
-				<button ng-show = "activeRooms === 'dining'" class="col-xs-1 col-xs-offset-5 back" ng-click="diningHall()" >Hallway</button>
-				<button ng-show = "activeRooms === 'dining'" class="col-xs-1 col-xs-offset-8 diningright" ng-click="diningKitchen()" >Kitchen</button>
+				<button class="back" ng-click="diningHall()" >Hallway</button>
+				<button class="diningright" ng-click="diningKitchen()" >Kitchen</button>
 	</div>
 </div>
 

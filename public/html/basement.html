@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='game'>
 <head>
 	<title>Basement</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="game.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
 	
 </head>
-<body>
+<body ng-controller='scary'>
 
 <div class="container-fluid">
-	<div class="row">
-			
+	<div class="row house">
+			<img class = "img-responsive house" ng-src = "{{screen.basement.img}}">
 		
 <!-- basement -->
-				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('stairs')" >Stairs</button>
-				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-5 basementvault" ng-click="changeRoom('vault')" >Vault</button>
-				<button ng-show = "activeRooms === 'basement'" class="col-xs-1 col-xs-offset-10 basementfurnace" ng-click="changeRoom('furnace')" >Furnace</button>
-				<button ng-show = "activeRooms === 'basement' && hidehole" class="col-xs-1 col-xs-offset-9 btn btn-danger basementhide" ng-click="changeRoom('coffin')" >HIDE</button>
+				<button class="back" ng-click="changeRoom('stairs')" >Stairs</button>
+				<button class="basementvault" ng-click="changeRoom('vault')" >Vault</button>
+				<button class="basementfurnace" ng-click="changeRoom('furnace')" >Furnace</button>
+				<button class="btn btn-danger basementhide" ng-click="changeRoom('coffin')" >HIDE</button>
 	</div>
 </div>
 

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='game'>
 <head>
 	<title>Hall</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="game.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
 	
 </head>
-<body>
+<body ng-controller='scary'>
 <div class="container-fluid">
 	<div class="row">
-
+	<img class = "img-responsive house" ng-src = "{{screen.mainHall.img}}">
 <!-- MAIN HALLWAY -->
-				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-8 hallBackRight" ng-click="changeRoom('kitchen')">Kitchen</button>
-				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-6 hallBackLeft" ng-click="changeRoom('stairs')">Stairs</button>
-				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-9 hallFrontRight" ng-click="introClock()">Dining</button>
-				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-4 hallFrontLeft" ng-click="changeRoom('frontroom')">Front Room</button>
-				<button ng-show = "activeRooms === 'mainHall'" class="col-xs-1 col-xs-offset-5 back" ng-click="changeRoom('door')" >Door</button>
+				<button class="hallBackRight" ng-click="changeRoom('kitchen')">Kitchen</button>
+				<button class="hallBackLeft" ng-click="changeRoom('stairs')">Stairs</button>
+				<button class="hallFrontRight" ng-click="introClock()">Dining</button>
+				<button class="hallFrontLeft" ng-click="changeRoom('frontroom')">Front Room</button>
+				<button class="back" ng-click="changeRoom('door')" >Door</button>
 	</div>
 </div>
 
