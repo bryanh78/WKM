@@ -1,9 +1,75 @@
+.buttonHolder{
+	height: 900px;
+	width: 960px;
+	position: relative;
+	bottom: 100%;
+}
+.forward, .left, .right, .back {
+	position: absolute;
+}
+
+.right {
+	background-color: red;
+	color: white;
+	font-size: 3em;
+	opacity: 0.5;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	height: 50%;
+	width: 12%;
+	bottom: 25%;
+	right: 5%;
+}
+
+.left {
+	background-color: red;
+	color: white;
+	font-size: 3em;
+	opacity: 0.5;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	height: 50%;
+	width: 12%;
+	bottom: 25%;
+	left: 5%;
+}
+
+.back {
+	background-color: red;
+	color: white;
+	font-size: 3em;
+	opacity: 0.5;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	height: 12%;
+	width: 50%;
+	bottom: 5%;
+	left: 25%;
+}
+.forward {
+	background-color: red;
+	color: white;
+	font-size: 3em;
+	opacity: 0.5;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+	height: 12%;
+	width: 50%;
+	top: 5%;
+	left: 25%;
+}
+
+.invin {
+	position: absolute;
+	top:0;
+}
 
 .doorLock {
 	position: absolute;
-	bottom: 10%;
-	height: 60px;
-	width: 60px;
+	bottom: 25%;
+	left: 10%;
+	height: 7%;
+	width: 5%;
 }
 
 .btn {
@@ -44,110 +110,14 @@
 	color: white;
 	top: 5%;
 }
-.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
+.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
 	position: absolute;
 }
 .vaultkey, .death, .key, .secondnote, .thirdnote, .necklace, .firstnote, {
 	position: absolute;
 }
-.bedroomhide {
-	bottom: 250px;
-}
-.basementhide {
-	bottom: 200px;
-}
-.kitchenhide {
-	bottom: 350px;
-}
-.kitchenleft {
-	bottom: 180px;
-}
-.diningright {
-	bottom: 550px;
-}
-.libraryright {
-	bottom: 300px;
-}
-.invin {
-	bottom:880px;
-}
+
 .dark {
 	bottom: 500px;
 	color: white;
-}
-.secondfloorleft {
-	bottom: 260px;
-}
-.secondfloorbackleft, .secondfloorbackright {
-	bottom:350px;
-}
-.secondfloorright {
-	bottom: 300px;
-}
-.basementvault {
-	bottom: 550px;
-} 
-.basementfurnace {
-	bottom: 500px;
-}
-.hallBackRight {
-	top:320px;
-}
-.hallBackLeft {
-	top:220px;
-}
-.hallFrontRight {
-	bottom: 400px;
-}
-.hallFrontLeft {
-	bottom: 350px;
-}
-.back {
-	bottom: 50px;
-}
-.stairsup {
-	bottom: 600px;
-}
-.stairsdown {
-	bottom:300px;
-}
-.key {
-	top: 500px;
-	background-color: red;
-	padding: 25px;
-}
-.flashlight {
-	bottom: 380px;
-	background-color: red;
-	padding: 25px;
-}
-.firstnote {
-	bottom: 600px;
-	background-color: red;
-	padding: 25px;
-}
-.secondnote {
-	top: 500px;
-	background-color: red;
-	padding: 25px;
-}
-.thirdnote {
-	top: 500px;
-	background-color: red;
-	padding: 25px;
-}
-.necklace {
-	top: 500px;
-	background-color: red;
-	padding: 25px;
-}
-.vaultkey {
-	top: 500px;
-	background-color: red;
-	padding: 25px;
-}
-.death {
-	background-color: red;
-	padding: 25px;
-	bottom: 100px;
 }

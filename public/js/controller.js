@@ -21,6 +21,14 @@ angular.module("game")
 			s.screen = scaryFactor.screen
 			s.items = scaryFactor.items
 
+			s.level = "img"
+
+			s.intensify = function() {
+				s.level = 'img2'
+				return s.level
+			}
+
+			
 			s.deaththing = function () {
 				s.changeRoom('deathface')
 				s.death.play()

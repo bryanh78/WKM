@@ -1,6 +1,7 @@
 
-		<img class = "img-responsive house" ng-src = "../photos/edited/normal/{{activeRooms}}">
+		<img class = "img-responsive house" ng-src = "{{place[0][level]}}">
 <!-- bedroom -->
-				<button class="back" ng-click="changeRoom('secondfloor')" >Second Floor</button>
-				<button class="secondfloorleft" ng-click="changeRoom('kidsroom')" >Kids Room</button>
-				<button class="btn btn-danger bedroomhide" ng-click="changeRoom('underbed')" >HIDE</button>
+				<button class="forward" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Forward</button>
+				<button class="left" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Left</button>
+				<button class="right" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Right</button>
+				<button class="back" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Back</button>

@@ -8,7 +8,7 @@ var screen = {
 				},
 				door : {
 					img : "../photos/edited/normal/door.jpg",
-					img2 : "",
+					img2 : "../photos/edited/level 2/door.jpg",
 					img3 : ""
 				},
 				mainHall : {
@@ -26,6 +26,11 @@ var screen = {
 					img2 : "",
 					img3 : ""
 				},
+				kitchen2 : {
+					img : "../photos/edited/normal/kitchen2.jpg",
+					img2 : "",
+					img3 : ""
+				},
 				stairs : {
 					img :"../photos/edited/normal/stairstop.jpg",
 					img2 : "",
@@ -37,90 +42,196 @@ var screen = {
 					img3 : ""
 				},
 				dining : {
-					img : "http://i.dailymail.co.uk/i/pix/2013/04/30/article-2316987-198AAE6A000005DC-733_964x634.jpg",
+					img :"../photos/edited/normal/dining.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				livingroom : {
-					img : "http://41.media.tumblr.com/625f3e51caeebec12ccaa6fe242de834/tumblr_nldtcaPnk11s1vn29o1_500.jpg",
+				livingRoom : {
+					img :"../photos/edited/normal/livingroom.jpg",
 					img2 : "",
 					img3 : ""
 				},
 				basement : {
-					img :"http://www.lovethesepics.com/wp-content/uploads/2012/10/The-black-figure-in-an-old-abandoned-crypt-full-of-mostly-empty-coffins.jpg",
+					img :"../photos/edited/normal/basement.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				vault : {
-					img : "http://i.imgur.com/v6PYXYw.jpg",
+				darkRoom : {
+					img :"../photos/edited/normal/darkroomL.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				furnace : {
-					img : "http://i.imgur.com/Rau7e4x.jpg",
+				darkRoom2 : {
+					img :"../photos/edited/normal/darkdoor.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				secondfloor : {
-					img : "http://www.lovethesepics.com/wp-content/uploads/2012/10/This-abandoned-grand-ballroom-was-one-of-the-best-i-have-seen-real-heavy-decay-creeping-in-from-all-over-was-once-a-hotel-too.jpg",
+				secondFloor : {
+					img :"../photos/edited/normal/upstairsfromhall.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				bedroom : {
-					img : "http://www.lovethesepics.com/wp-content/uploads/2012/10/The-master-bedroom.jpg",
+				bedRoom : {
+					img :"../photos/edited/normal/bedroom.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				junkroom : {
-					img : "http://www.lovethesepics.com/wp-content/uploads/2012/10/Ghost-house-a-real-creepy-room-in-the-abandoned-manor-house.jpg",
+				empty : {
+					img :"../photos/edited/normal/bedroom.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				black : {
-					img : "https://d2d00szk9na1qq.cloudfront.net/Product/dbba6000-0c50-4a43-9f72-b12fe0720e2a/Images/Large_DJ-423.jpg",
+				darkRoom3 : {
+					img :"../photos/edited/normal/darkroom2L.jpg",
 					img2 : "",
 					img3 :"" 
 				},
-				doorlock : {
-					img : "http://www.losspreventionplan.com/wp-content/uploads/2014/04/locks-doors.jpg",
+				darkRoom4 : {
+					img :"../photos/edited/normal/darkroom3L.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				library : {
-					img : "http://www.lovethesepics.com/wp-content/uploads/2012/10/Library-ghosts-The-Manor-library-was-very-dusty-and-the-smell-of-decay-and-paper-was-really-still-and-creepy.jpg",
+				darkRoom5 : {
+					img :"../photos/edited/normal/darkroomfound.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				kidsroom : {
-					img : "http://www.lovethesepics.com/wp-content/uploads/2012/10/Youre-not-afraid-of-the-dark-are-you-Creepy-carriage-at-spooky-abandoned-manor-house.jpg",
+				basement2 : {
+					img :"../photos/edited/normal/basefrom2.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				underbed : {
-					img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuFEvdW9-e4eDL4em5gUWAKXGTwVZ3j3E6VVn25eyFIHu4HsMipA",
+				basement3 : {
+					img :"../photos/edited/normal/basefromdark.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				closet : {
-					img : "http://www.masterheartmagazine.com/collaborators/Giuffre-Heitzner_Anna-Marie/_images/Light-Through-Door.gif",
+				basement4 : {
+					img :"../photos/edited/normal/basement2.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				coffin : {
-					img : "https://s-media-cache-ak0.pinimg.com/736x/46/ec/7d/46ec7d02c7f60790ac164baad8cd8a13.jpg",
+				mainHall3 : {
+					img :"../photos/edited/normal/basementdoor.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				deathface : {
-					img : "https://i.ytimg.com/vi/Yqh6CFMltWU/hqdefault.jpg",
+				bathRoom3H : {
+					img :"../photos/edited/normal/bath3hide.jpg",
 					img2 : "",
 					img3 : ""
 				},
-				freedom : {
-					img : "https://upload.wikimedia.org/wikipedia/commons/5/5d/Open_Field_Sutton_Park.jpg",
+				bathRoom : {
+					img :"../photos/edited/normal/bathroom1.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				bathRoom2 : {
+					img :"../photos/edited/normal/bathroom2.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				bathRoom3 : {
+					img :"../photos/edited/normal/bathroom3.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				bedRoom2 : {
+					img :"../photos/edited/normal/bedroomhall.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				bedRoom3 : {
+					img :"../photos/edited/normal/bedroomhallfrombath.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				bedRoom4 : {
+					img :"../photos/edited/normal/bedroomfromhall.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				entertain : {
+					img :"../photos/edited/normal/entertainbath.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				entertain2 : {
+					img :"../photos/edited/normal/entertainbathhide.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				entertain3 : {
+					img :"../photos/edited/normal/entertainfrombath.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				entertain4 : {
+					img :"../photos/edited/normal/entertainroom.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				guestBed : {
+					img :"../photos/edited/normal/guestbedroomfrombath.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				guestBed2 : {
+					img :"../photos/edited/normal/guestfromhall.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				secondFloor2 : {
+					img :"../photos/edited/normal/hallfromempty.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				secondFloor3 : {
+					img :"../photos/edited/normal/hallfromupstairs.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				livingRoom2 : {
+					img :"../photos/edited/normal/livingfromhall.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				office : {
+					img :"../photos/edited/normal/office.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				sideHall : {
+					img :"../photos/edited/normal/sidefromoffice.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				sideHall2 : {
+					img :"../photos/edited/normal/sidehall.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				sink : {
+					img :"../photos/edited/normal/sinkfromempty.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				bottomStairs : {
+					img :"../photos/edited/normal/stairstobasement.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				bottomStairs2 : {
+					img :"../photos/edited/normal/starisfrombase.jpg",
+					img2 : "",
+					img3 : ""
+				},
+				secondFloor4 : {
+					img :"../photos/edited/normal/upstairsfrombedroom.jpg",
 					img2 : "",
 					img3 : ""
 				}
+				
 			}
 
 var items = {

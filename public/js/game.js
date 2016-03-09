@@ -9,7 +9,7 @@ angular.module("game")
 			.when('/door', {
 				templateUrl : '/html/door.html'
 			})
-			.when('/mainhall', {
+			.when('/hall', {
 				templateUrl : '/html/hall.html'
 			})
 			.when('/dining', {
@@ -42,27 +42,42 @@ angular.module("game")
 			.when('/empty', {
 				templateUrl : '/html/empty.html'
 			})
-			// .when('/bathroom3', {
-			// 	templateUrl : '/html/bathroom3.html'
-			// })
-			// .when('/guestbed', {
-			// 	templateUrl : '/html/guestbed.html'
-			// })
-			// .when('/entertain', {
-			// 	templateUrl : '/html/entertain.html'
-			// })
-			// .when('/basementstairs', {
-			// 	templateUrl : '/html/basementstairs.html'
-			// })
-			// .when('/basement', {
-			// 	templateUrl : '/html/basement.html'
-			// })
-			// .when('/empty', {
-			// 	templateUrl : '/html/empty.html'
-			// })
-			// .when('/empty', {
-			// 	templateUrl : '/html/empty.html'
-			// })
+			.when('/bathroom3', {
+				templateUrl : '/html/bathroom3.html'
+			})
+			.when('/guestbed', {
+				templateUrl : '/html/guestbed.html'
+			})
+			.when('/entertain', {
+				templateUrl : '/html/entertain.html'
+			})
+			.when('/stairs', {
+				templateUrl : '/html/basementstairs.html'
+			})
+			.when('/basement', {
+				templateUrl : '/html/basement.html'
+			})
+			.when('/darkroom', {
+				templateUrl : '/html/darkroom.html'
+			})
+			.when('/death', {
+				templateUrl : '/html/death.html'
+			})
+			.when('/entertain', {
+				templateUrl : '/html/entertain.html'
+			})
+			.when('/hide1', {
+				templateUrl : '/html/hide1.html'
+			})
+			.when('/hide2', {
+				templateUrl : '/html/hide2.html'
+			})
+			.when('/sink', {
+				templateUrl : '/html/sink.html'
+			})
+			.when('/win', {
+				templateUrl : '/html/win.html'
+			})
 
 
 	})
