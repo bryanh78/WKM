@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html ng-app='game'>
-<head>
-	<title>Door</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/game.css">
-	
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="../js/game.js"></script>
-	
-</head>
-<body ng-controller='scary'>
-<div class="container-fluid">
-	<div class="row">
-	<img class = "img-responsive house" ng-src = "{{screen.door.img}}">
-<!-- DOORWAY -->
-				<button class="back" ng-click="changeRoom('mainHall')" >Hallway</button>
-				<div class="death" ng-click="codebox()"></div>
-	</div>
-</div>
+	<img class = "img-responsive house" ng-src="{{place[0].img}}"/>
+	<button class="back" ng-click="changeRoom(screen.mainHall); changeURL('/mainhall')" >Hallway</button>
+	<img class="doorLock" ng-click="codebox()" ng-src = "../photos/edited/stuff/doorLock.jpg"/>
 
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
-</body>
-</html>

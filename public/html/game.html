@@ -4,10 +4,13 @@
 	<title>Game</title>
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="game.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script>
+	<script type="text/javascript" src="../js/game.js"></script>
+	<script type="text/javascript" src="../js/controller.js"></script>
+	<script type="text/javascript" src="../js/factory.js"></script>
 	
 </head>
 <body  ng-controller = "scary">
@@ -22,8 +25,9 @@
 			<audio id="piano" src="sounds/170593__timpan__scary-piano.wav"></audio>
 			<audio id="death" src="sounds/178058__hugoluman__horrifyingscreams.wav"></audio>
 		<div class = "row">
-				<img class = "img-responsive house" ng-src = "{{screen[activeRooms].img}}">
-
+				<!-- <img class = "img-responsive house" ng-src = "{{screen[activeRooms].img}}"> -->
+				<div style='height: 900px;'ng-view> </div>
+				
 			<div class="dropdown invin">
 				<button id="inventory" type="button" ng-hide = "activeRooms==='mainScreen' || activeRooms === 'deathface'"  aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Inventory
 					<span class="caret"></span>
@@ -53,10 +57,7 @@
 			</div> 
 
 
-			<div class="col-xs-4 col-xs-offset-4 header" ng-show = "activeRooms === 'mainScreen'">
-					<h1>Haunted House</h1>
-					<p class = "col-xs-offset-2">(spooky stuff man)</p>
-				</div>
+			
 			<!-- ITEMS -->
 				<div class="modal fade bs-item-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   					<div class="modal-dialog modal-sm">

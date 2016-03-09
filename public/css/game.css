@@ -1,3 +1,16 @@
+
+.doorLock {
+	position: absolute;
+	bottom: 10%;
+	height: 60px;
+	width: 60px;
+}
+
+.btn {
+	bottom: 200px;
+	position: relative;
+}
+
 .container-fluid {
 	max-width: 960px;
 }
@@ -10,7 +23,7 @@
 	height: 900px;
 	background-size: 100% 100%;
 	position: relative;
-	background-color: black;
+/*	background-color: black;*/
 }
 .start {
 	bottom: 180px;
@@ -20,14 +33,21 @@
 	bottom: 140px;
 	width: 33%;
 }
+.subHeader {
+	position: absolute;
+	top :12%;
+	left: 45%;
+	color:white;
+}
 .header {
+	left: 39%;
 	color: white;
-	top: 20px;
+	top: 5%;
 }
 .options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .back, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
 	position: absolute;
 }
-.vaultkey, .death, .key, .secondnote, .thirdnote, .necklace, .firstnote {
+.vaultkey, .death, .key, .secondnote, .thirdnote, .necklace, .firstnote, {
 	position: absolute;
 }
 .bedroomhide {
@@ -127,7 +147,7 @@
 	padding: 25px;
 }
 .death {
-	top: 500px;
 	background-color: red;
 	padding: 25px;
+	bottom: 100px;
 }

@@ -1,30 +1,8 @@
-<!DOCTYPE html>
-<html ng-app='game'>
-<head>
-	<title>Hall</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/game.css">
-	
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="../js/game.js"></script>
-	
-</head>
-<body ng-controller='scary'>
-<div class="container-fluid">
-	<div class="row">
-	<img class = "img-responsive house" ng-src = "{{screen.mainHall.img}}">
+
+	<img class = "img-responsive house" ng-src = "{{place[0].img}}">
 <!-- MAIN HALLWAY -->
 				<button class="hallBackRight" ng-click="changeRoom('kitchen')">Kitchen</button>
 				<button class="hallBackLeft" ng-click="changeRoom('stairs')">Stairs</button>
 				<button class="hallFrontRight" ng-click="introClock()">Dining</button>
 				<button class="hallFrontLeft" ng-click="changeRoom('frontroom')">Front Room</button>
 				<button class="back" ng-click="changeRoom('door')" >Door</button>
-	</div>
-</div>
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
-</body>
-</html>

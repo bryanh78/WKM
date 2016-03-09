@@ -10,10 +10,28 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
+
 // Routes \\
 app.get('/', function(req, res){
-  res.sendFile('main.html',{root:'./public'})
+  res.sendFile('/html/game.html',{root:'./public'})
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Creating Server and Listening for Connections \\
 var port = 3000

@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html ng-app='game'>
-<head>
-	<title>Basement</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/game.css">
-	
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="../js/game.js"></script>
-	
-</head>
-<body ng-controller='scary'>
 
-<div class="container-fluid">
-	<div class="row house">
-			<img class = "img-responsive house" ng-src = "{{screen.basement.img}}">
+			<img class = "img-responsive house" ng-src = "../photos/edited/normal/{{activeRooms}}">
 		
 <!-- basement -->
 				<button class="back" ng-click="changeRoom('stairs')" >Stairs</button>
 				<button class="basementvault" ng-click="changeRoom('vault')" >Vault</button>
 				<button class="basementfurnace" ng-click="changeRoom('furnace')" >Furnace</button>
 				<button class="btn btn-danger basementhide" ng-click="changeRoom('coffin')" >HIDE</button>
-	</div>
-</div>
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
-</body>
-</html>

@@ -1,32 +1,9 @@
-<!DOCTYPE html>
-<html ng-app='game'>
-<head>
-	<title>Main Screen</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/game.css">
-	
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="../js/game.js"></script>
-	
-</head>
-<body ng-controller='scary'>
-<div class="container-fluid">
-	<div class="row">
-		<img class = "img-responsive house" ng-src = "{{screen.mainScreen.img}}">	
+
+		<img class = "img-responsive house" ng-src = "{{screen['mainScreen'].img}}">	
 <!-- MAIN SCREEN -->
 				<div class="header">
 					<h1>Haunted House</h1>
-					<p class="header">(spooky stuff man)</p>
 				</div>
-				<button class = "btn btn-danger btn-block start" ng-click="start(); scarySounds()">-START-</button>
-				<button class = "btn btn-info btn-block options">-OPTIONS-</button>
-		
-	</div>
-</div>
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
-</body>
-</html>
+				<p class="subHeader">(spooky stuff man)</p>
+				<button class = "btn btn-danger btn-block" ng-click="start(); scarySounds(); changeRoom(screen.door)">-START-</button>
+				<button class = "btn btn-info btn-block">-OPTIONS-</button>

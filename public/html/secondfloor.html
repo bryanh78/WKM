@@ -1,32 +1,8 @@
-<!DOCTYPE html>
-<html ng-app='game'>
-<head>
-	<title>Second Floor</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/game.css">
-	
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="../js/game.js"></script>
-	
-</head>
-<body ng-controller='scary'>
-<div class="container-fluid">
-	<div class="row">
-		<img class = "img-responsive house" ng-src = "{{screen.secondfloor.img}}">		
+
+		<img class = "img-responsive house" ng-src = "../photos/edited/normal/{{activeRooms}}">		
 <!-- upstairs -->
 				<button class="back" ng-click="changeRoom('library')" >library</button>
 				<button class="secondfloorleft" ng-click="changeRoom('stairs')" >Stairs</button>
 				<button class="secondfloorbackleft" ng-click="changeRoom('bedroom')" >Bedroom</button>
 				<button class="secondfloorbackleft" ng-click="changeRoom('kidsroom')" >Kids Room</button>
 				<button class="secondfloorright" ng-click="introPiano()" >Junkroom</button>
-			
-	</div>
-</div>
-
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
-</body>
-</html>
