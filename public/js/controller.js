@@ -22,24 +22,6 @@ angular.module("game")
 			s.screen = scaryFactor.screen
 			s.items = scaryFactor.items
 
-			s.positionCheck = function() {
-				if ('s.place[0].back'=== true) {
-					return 'person[0][level]'
-				} else {
-					if (s.place[0].back === false) {
-						return 'place[0][level]'
-					} else {
-						if (s.level='img') {
-							return 'person[0].back'
-						} else if (s.level='img2') {
-							return 'person[0].back2'
-						} else {
-							return 'person[0].back3'
-						}
-					}
-				}
-			}
-
 			s.intensifyier = function() {
 				s.level = 'img3'
 				return s.level

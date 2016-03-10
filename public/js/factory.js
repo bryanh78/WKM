@@ -6,242 +6,251 @@ var screen = {
 				mainScreen : {
 					img : "http://vignette2.wikia.nocookie.net/creepypasta/images/0/01/Creepy_house-wallpaper-1600x900.jpg/revision/latest?cb=20121007054213"
 				},
-				door : {
+				Door : {
 					img : "../photos/edited/normal/door.jpg",
 					img2 : "../photos/edited/level 2/door.jpg",
-					img3 : "../photos/edited/level 3/door.jpg",
-					back : false,
-					back2 : false,
-					back3 : false
+					img3 : "../photos/edited/level 3/door.jpg"
 				},
-				mainHall : {
+				MainHall : {
 					img : "../photos/edited/normal/mainhall.jpg",
 					img2 : "../photos/edited/level 2/mainhall.jpg",
-					img3 : "../photos/edited/level 3/mainhall.jpg",
-					back : false,
-					back2 : false,
-					back3 : false
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				mainHall2 : {
+				HallFromLiving : {
 					img : "../photos/edited/normal/mainhallfromliving.jpg",
 					img2 : "../photos/edited/level 2/mainhallfromliving.jpg",
-					img3 : "../photos/edited/level 3/mainhallfromliving.jpg",
-					back : "../photos/edited/normal/basementdoor.jpg",
-					back2 : false,
-					back3 : false
+					img3 : "../photos/edited/level 3/mainhallfromliving.jpg"
 				},
-				kitchen : {
+				
+				Kitchen : {
 					img : "../photos/edited/normal/kitchen.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				kitchen2 : {
+				Kitchen2 : {
 					img : "../photos/edited/normal/kitchen2.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				stairs : {
+				StairsTop : {
 					img :"../photos/edited/normal/stairstop.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				stairs2 : {
+				StairsFromTop : {
 					img :"../photos/edited/normal/stairsfromtop.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				dining : {
+				Dining : {
 					img :"../photos/edited/normal/dining.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				livingRoom : {
+				Living : {
 					img :"../photos/edited/normal/livingroom.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				basement : {
+				Base : {
 					img :"../photos/edited/normal/basement.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				darkRoom : {
+				Dark : {
 					img :"../photos/edited/normal/darkroomL.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				darkRoom2 : {
+				DarkDoor : {
 					img :"../photos/edited/normal/darkdoor.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				secondFloor : {
+				UpstairsFromHall : {
 					img :"../photos/edited/normal/upstairsfromhall.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bedRoom : {
+				BedRoom : {
 					img :"../photos/edited/normal/bedroom.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
 				empty : {
-					img :"../photos/edited/normal/bedroom.jpg",
-					img2 : "",
-					img3 : ""
+					img :"../photos/edited/normal/empty.jpg",
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				darkRoom3 : {
+				DarkLeft : {
 					img :"../photos/edited/normal/darkroom2L.jpg",
-					img2 : "",
-					img3 :"" 
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				darkRoom4 : {
+				DarkRight : {
 					img :"../photos/edited/normal/darkroom3L.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				darkRoom5 : {
+				DarkFound : {
 					img :"../photos/edited/normal/darkroomfound.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				basement2 : {
+				BaseFrom2 : {
 					img :"../photos/edited/normal/basefrom2.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				basement3 : {
+				BaseFromDark : {
 					img :"../photos/edited/normal/basefromdark.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				basement4 : {
+				Base2 : {
 					img :"../photos/edited/normal/basement2.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				mainHall3 : {
+				BaseDoor : {
 					img :"../photos/edited/normal/basementdoor.jpg",
 					img2 : "../photos/edited/level 2/basementdoor.jpg",
 					img3 : "../photos/edited/level 3/basementdoor.jpg",
-					back : "../photos/edited/normal/mainhallfromliving.jpg",
-					back2 : false,
-					back3 : false
 				},
-				bathRoom3H : {
+				Bath3Hide : {
 					img :"../photos/edited/normal/bath3hide.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bathRoom : {
+				Bath1 : {
 					img :"../photos/edited/normal/bathroom1.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bathRoom2 : {
+				Bath2 : {
 					img :"../photos/edited/normal/bathroom2.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bathRoom3 : {
+				Bath3 : {
 					img :"../photos/edited/normal/bathroom3.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bedRoom2 : {
+				BedHall : {
 					img :"../photos/edited/normal/bedroomhall.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bedRoom3 : {
+				BedFromBath : {
 					img :"../photos/edited/normal/bedroomhallfrombath.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bedRoom4 : {
+				BedFromHall : {
 					img :"../photos/edited/normal/bedroomfromhall.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				entertain : {
+				EntertainBath : {
 					img :"../photos/edited/normal/entertainbath.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				entertain2 : {
+				EntertainBathHide : {
 					img :"../photos/edited/normal/entertainbathhide.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				entertain3 : {
+				EntertainFromBath : {
 					img :"../photos/edited/normal/entertainfrombath.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				entertain4 : {
+				Entertain : {
 					img :"../photos/edited/normal/entertainroom.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				guestBed : {
+				GuestFromBath : {
 					img :"../photos/edited/normal/guestbedroomfrombath.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				guestBed2 : {
+				GuestFromHall : {
 					img :"../photos/edited/normal/guestfromhall.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				secondFloor2 : {
+				HallFromEmpty : {
 					img :"../photos/edited/normal/hallfromempty.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				secondFloor3 : {
+				HallFromUpstairs : {
 					img :"../photos/edited/normal/hallfromupstairs.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				livingRoom2 : {
-					img :"../photos/edited/normal/livingfromhall.jpg",
-					img2 : "",
-					img3 : ""
+				LivingFromSide : {
+					img :"../photos/edited/normal/livingfromside.jpg",
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				office : {
+				Office : {
 					img :"../photos/edited/normal/office.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				sideHall : {
+				SideFromOffice : {
 					img :"../photos/edited/normal/sidefromoffice.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				sideHall2 : {
+				SideHall : {
 					img :"../photos/edited/normal/sidehall.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				sink : {
+				Sink : {
 					img :"../photos/edited/normal/sinkfromempty.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bottomStairs : {
+				StairsToBase : {
 					img :"../photos/edited/normal/stairstobasement.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				bottomStairs2 : {
-					img :"../photos/edited/normal/starisfrombase.jpg",
-					img2 : "",
-					img3 : ""
+				StairsFromBase : {
+					img :"../photos/edited/normal/stairsfrombasement.jpg",
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				secondFloor4 : {
+				UpstairsFromBedroom: {
 					img :"../photos/edited/normal/upstairsfrombedroom.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
+				},
+				EmptyToUpstairs : {
+					img :"../photos/edited/normal/emptytoupstairs.jpg",
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
+				},
+				GuestToUpstairs : {
+					img :"../photos/edited/normal/guesttoupstairs.jpg",
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
+				},
+				StairsBottom : {
+					img :"../photos/edited/normal/stairsbottom.jpg",
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
+				},
+				UpstairsLeft : {
+					img :"../photos/edited/normal/upstairsleft.jpg",
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
 				}
 				
 			}
