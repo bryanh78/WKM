@@ -7,6 +7,7 @@ angular.module("game")
 			var s = $scope
 			// var h = $http
 			// s.activeRooms = "mainScreen"
+			s.level = "img"
 			s.place = []
 			s.person = []
 			s.selectedThing = []
@@ -21,7 +22,24 @@ angular.module("game")
 			s.screen = scaryFactor.screen
 			s.items = scaryFactor.items
 
-			s.level = "img"
+			s.positionCheck = function() {
+				if (s.place[0].back === false) {
+					return {{place[0][level]}}
+				} else {
+					if (s.level='img') {
+						return {{person[0].back}}
+					} else if (s.level='img2') {
+						return {{person[0].back2}}
+					} else {
+						return {{person[0].back3}}
+					}
+				}
+			}
+
+			s.intensifyier = function() {
+				s.level = 'img3'
+				return s.level
+			}
 
 			s.intensify = function() {
 				s.level = 'img2'
