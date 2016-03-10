@@ -5,5 +5,6 @@
 				<button class="forward" ng-click="changeRoom(screen.mainHall3)" >Forward</button>
 				<button class="left" ng-click="changeRoom(screen.stairs); changeURL('/secondfloor')" >Left</button>
 				<button class="right" ng-click="changeRoom(screen.dining); changeURL('/dining')" >Right</button>
-				<button class="back" ng-click="changeRoom(screen.door); changeURL('/door')" >Back</button>
+				<button class="back" ng-click=" positionCheck()" >Back</button>
 			</div>
+			<!-- ; changeRoom(screen.door); changeURL('/door') -->

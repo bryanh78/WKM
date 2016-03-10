@@ -24,8 +24,11 @@ var screen = {
 				},
 				mainHall2 : {
 					img : "../photos/edited/normal/mainhallfromliving.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhallfromliving.jpg",
+					img3 : "../photos/edited/level 3/mainhallfromliving.jpg",
+					back : "../photos/edited/normal/basementdoor.jpg",
+					back2 : false,
+					back3 : false
 				},
 				kitchen : {
 					img : "../photos/edited/normal/kitchen.jpg",
@@ -119,8 +122,11 @@ var screen = {
 				},
 				mainHall3 : {
 					img :"../photos/edited/normal/basementdoor.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/basementdoor.jpg",
+					img3 : "../photos/edited/level 3/basementdoor.jpg",
+					back : "../photos/edited/normal/mainhallfromliving.jpg",
+					back2 : false,
+					back3 : false
 				},
 				bathRoom3H : {
 					img :"../photos/edited/normal/bath3hide.jpg",
