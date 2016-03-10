@@ -9,12 +9,18 @@ var screen = {
 				door : {
 					img : "../photos/edited/normal/door.jpg",
 					img2 : "../photos/edited/level 2/door.jpg",
-					img3 : ""
+					img3 : "../photos/edited/level 3/door.jpg",
+					back : false,
+					back2 : false,
+					back3 : false
 				},
 				mainHall : {
 					img : "../photos/edited/normal/mainhall.jpg",
-					img2 : "",
-					img3 : ""
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg",
+					back : false,
+					back2 : false,
+					back3 : false
 				},
 				mainHall2 : {
 					img : "../photos/edited/normal/mainhallfromliving.jpg",

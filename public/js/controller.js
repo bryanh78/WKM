@@ -23,15 +23,19 @@ angular.module("game")
 			s.items = scaryFactor.items
 
 			s.positionCheck = function() {
-				if (s.place[0].back === false) {
-					return {{place[0][level]}}
+				if ({{s.place[0].back}}=== true) {
+					return {{person[0][level]}}
 				} else {
-					if (s.level='img') {
-						return {{person[0].back}}
-					} else if (s.level='img2') {
-						return {{person[0].back2}}
+					if (s.place[0].back === false) {
+						return {{place[0][level]}}
 					} else {
-						return {{person[0].back3}}
+						if (s.level='img') {
+							return {{person[0].back}}
+						} else if (s.level='img2') {
+							return {{person[0].back2}}
+						} else {
+							return {{person[0].back3}}
+						}
 					}
 				}
 			}
