@@ -63,8 +63,8 @@ angular.module("game")
 			.when('/death', {
 				templateUrl : '/html/death.html'
 			})
-			.when('/entertain', {
-				templateUrl : '/html/entertain.html'
+			.when('/entertainbath', {
+				templateUrl : '/html/entertainbath.html'
 			})
 			.when('/hide1', {
 				templateUrl : '/html/hide1.html'
@@ -84,8 +84,8 @@ angular.module("game")
 			.when('/stairstobase', {
 				templateUrl : '/html/stairstobase.html'
 			})
-			.when('/livingtohall', {
-				templateUrl : '/html/livingtohall.html'
+			.when('/hallfromliving', {
+				templateUrl : '/html/hallfromliving.html'
 			})
 			.when('/kitchen2', {
 				templateUrl : '/html/kitchen2.html'
@@ -120,6 +120,69 @@ angular.module("game")
 			.when('/stairstop', {
 				templateUrl : '/html/stairstop.html'
 			})
+			.when('/upstairsfrombed', {
+				templateUrl : '/html/upstairsfrombed.html'
+			})
+			.when('/upstairsleft', {
+				templateUrl : '/html/upstairsleft.html'
+			})
+			.when('/stairsfromtop', {
+				templateUrl : '/html/stairsfromtop.html'
+			})
+			.when('/bedhall', {
+				templateUrl : '/html/bedhall.html'
+			})
+			.when('/bedfromhall', {
+				templateUrl : '/html/bedfromhall.html'
+			})
+			.when('/bedhallfrombath', {
+				templateUrl : '/html/bedhallfrombath.html'
+			})
+			.when('/upstairsfromhall', {
+				templateUrl : '/html/upstairsfromhall.html'
+			})
+			.when('/emptytoupstairs', {
+				templateUrl : '/html/emptytoupstairs.html'
+			})
+			.when('/hallfromupstairs', {
+				templateUrl : '/html/hallfromupstairs.html'
+			})
+			.when('/upstairsfromguest', {
+				templateUrl : '/html/upstairsfromguest.html'
+			})
+			.when('/guesttoupstairs', {
+				templateUrl : '/html/guesttoupstairs.html'
+			})
+			.when('/entertainbath', {
+				templateUrl : '/html/entertainbath.html'
+			})
+			.when('/guestfrombath', {
+				templateUrl : '/html/guestfrombath.html'
+			})
+			.when('/entertainfrombath', {
+				templateUrl : '/html/entertainfrombath.html'
+			})
+			.when('/hallfromempty', {
+				templateUrl : '/html/hallfromempty.html'
+			})
+			.when('/sinkfromempty', {
+				templateUrl : '/html/sinkfromempty.html'
+			})
+			// .when('/stairsbottom', {
+				// templateUrl : '/html/stairsbottom.html'
+			// })
+			// .when('/door', {
+			// 	templateUrl : '/html/door.html'
+			// })
+			// .when('/door', {
+			// 	templateUrl : '/html/door.html'
+			// })
+			// .when('/door', {
+			// 	templateUrl : '/html/door.html'
+			// })
+			// .when('/door', {
+			// 	templateUrl : '/html/door.html'
+			// })
 			// .when('/door', {
 			// 	templateUrl : '/html/door.html'
 			// })

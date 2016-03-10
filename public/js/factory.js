@@ -72,12 +72,12 @@ var screen = {
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				BedRoom : {
+				Bed : {
 					img :"../photos/edited/normal/bedroom.jpg",
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				empty : {
+				Empty : {
 					img :"../photos/edited/normal/empty.jpg",
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
@@ -142,7 +142,7 @@ var screen = {
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				BedFromBath : {
+				BedHallFromBath : {
 					img :"../photos/edited/normal/bedroomhallfrombath.jpg",
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
@@ -212,7 +212,7 @@ var screen = {
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				Sink : {
+				SinkFromEmpty : {
 					img :"../photos/edited/normal/sinkfromempty.jpg",
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
@@ -227,7 +227,7 @@ var screen = {
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
 				},
-				UpstairsFromBedroom: {
+				UpstairsFromBed: {
 					img :"../photos/edited/normal/upstairsfrombedroom.jpg",
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
@@ -249,6 +249,11 @@ var screen = {
 				},
 				UpstairsLeft : {
 					img :"../photos/edited/normal/upstairsleft.jpg",
+					img2 : "../photos/edited/level 2/mainhall.jpg",
+					img3 : "../photos/edited/level 3/mainhall.jpg"
+				},
+				UpstairsFromGuest : {
+					img :"../photos/edited/normal/upstairsfromguestbed.jpg",
 					img2 : "../photos/edited/level 2/mainhall.jpg",
 					img3 : "../photos/edited/level 3/mainhall.jpg"
 				}
