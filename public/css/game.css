@@ -116,7 +116,12 @@
 .vaultkey, .death, .key, .secondnote, .thirdnote, .necklace, .firstnote, {
 	position: absolute;
 }
-
+.firstnote {
+	background-color: red;
+	width: 15px;
+	height: 15px;
+	top:0;
+}
 .dark {
 	bottom: 500px;
 	color: white;

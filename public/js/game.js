@@ -81,8 +81,8 @@ angular.module("game")
 			.when('/basedoor', {
 				templateUrl : '/html/basedoor.html'
 			})
-			.when('/stairstobase', {
-				templateUrl : '/html/stairstobase.html'
+			.when('/basefromstairs', {
+				templateUrl : '/html/basefromstairs.html'
 			})
 			.when('/hallfromliving', {
 				templateUrl : '/html/hallfromliving.html'
@@ -120,11 +120,11 @@ angular.module("game")
 			.when('/stairstop', {
 				templateUrl : '/html/stairstop.html'
 			})
-			.when('/upstairsfrombed', {
-				templateUrl : '/html/upstairsfrombed.html'
+			.when('/topfrombed', {
+				templateUrl : '/html/topfrombed.html'
 			})
-			.when('/upstairsleft', {
-				templateUrl : '/html/upstairsleft.html'
+			.when('/upstairsfromtop', {
+				templateUrl : '/html/upstairsfromtop.html'
 			})
 			.when('/stairsfromtop', {
 				templateUrl : '/html/stairsfromtop.html'
@@ -132,45 +132,81 @@ angular.module("game")
 			.when('/bedhall', {
 				templateUrl : '/html/bedhall.html'
 			})
-			.when('/bedfromhall', {
-				templateUrl : '/html/bedfromhall.html'
-			})
 			.when('/bedhallfrombath', {
 				templateUrl : '/html/bedhallfrombath.html'
 			})
-			.when('/upstairsfromhall', {
-				templateUrl : '/html/upstairsfromhall.html'
+			.when('/topfromupstairs', {
+				templateUrl : '/html/topfromupstairs.html'
 			})
-			.when('/emptytoupstairs', {
-				templateUrl : '/html/emptytoupstairs.html'
+			.when('/upstairsfromempty', {
+				templateUrl : '/html/upstairsfromempty.html'
 			})
 			.when('/hallfromupstairs', {
 				templateUrl : '/html/hallfromupstairs.html'
 			})
-			.when('/upstairsfromguest', {
-				templateUrl : '/html/upstairsfromguest.html'
+			.when('/hallfromguest', {
+				templateUrl : '/html/hallfromguest.html'
 			})
-			.when('/guesttoupstairs', {
-				templateUrl : '/html/guesttoupstairs.html'
+			.when('/upstairsfromhall', {
+				templateUrl : '/html/upstairsfromhall.html'
 			})
 			.when('/entertainbath', {
 				templateUrl : '/html/entertainbath.html'
 			})
-			.when('/guestfrombath', {
-				templateUrl : '/html/guestfrombath.html'
-			})
-			.when('/entertainfrombath', {
-				templateUrl : '/html/entertainfrombath.html'
-			})
-			.when('/hallfromempty', {
-				templateUrl : '/html/hallfromempty.html'
-			})
 			.when('/sinkfromempty', {
 				templateUrl : '/html/sinkfromempty.html'
 			})
-			// .when('/stairsbottom', {
-				// templateUrl : '/html/stairsbottom.html'
-			// })
+			.when('/exitbase', {
+				templateUrl : '/html/exitbase.html'
+			})
+			.when('/dining2', {
+				templateUrl : '/html/dining2.html'
+			})
+			.when('/lookupstairs', {
+				templateUrl : '/html/lookupstairs.html'
+			})
+			.when('/hallfromdoor', {
+				templateUrl : '/html/hallfromdoor.html'
+			})
+			.when('/kitchenfromliving', {
+				templateUrl : '/html/kitchenfromliving.html'
+			})
+			.when('/viewfromkitchen', {
+				templateUrl : '/html/viewfromkitchen.html'
+			})
+			.when('/sidefromliving', {
+				templateUrl : '/html/sidefromliving.html'
+			})
+			.when('/mainfromliving', {
+				templateUrl : '/html/mainfromliving.html'
+			})
+			.when('/livingfromkitchen', {
+				templateUrl : '/html/livingfromkitchen.html'
+			})
+			.when('/bedfromtop', {
+				templateUrl : '/html/bedfromtop.html'
+			})
+			.when('/emptyfromupstairs', {
+				templateUrl : '/html/emptyfromupstairs.html'
+			})
+			.when('/guestfromsink', {
+				templateUrl : '/html/guestfromsink.html'
+			})
+			.when('/emptyfromsink', {
+				templateUrl : '/html/emptyfromsink.html'
+			})
+			.when('/sinkfromguest', {
+				templateUrl : '/html/sinkfromguest.html'
+			})
+			.when('/entertainfromhall', {
+				templateUrl : '/html/entertainfromhall.html'
+			})
+			.when('/guestfromhall', {
+				templateUrl : '/html/guestfromhall.html'
+			})
+			.when('/hallfromentertain', {
+				templateUrl : '/html/hallfromentertain.html'
+			})
 			// .when('/door', {
 			// 	templateUrl : '/html/door.html'
 			// })
@@ -186,16 +222,6 @@ angular.module("game")
 			// .when('/door', {
 			// 	templateUrl : '/html/door.html'
 			// })
-			// .when('/door', {
-			// 	templateUrl : '/html/door.html'
-			// })
-			// .when('/door', {
-			// 	templateUrl : '/html/door.html'
-			// })
-			// .when('/door', {
-			// 	templateUrl : '/html/door.html'
-			// })
-
 
 	})
 

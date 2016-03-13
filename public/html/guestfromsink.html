@@ -1,0 +1,8 @@
+<img class = "img-responsive house" ng-src = "{{place[0][level]}}">		
+
+					<div class="buttonHolder">
+				<button class="forward" ng-click="changeRoom(screen.Guest); changeURL('/guest')" >Forward</button>
+				<button class="left" ng-click="changeRoom(screen.Sink); changeURL('/sink')" >Turn Left</button>
+				<button class="right" ng-click="changeRoom(screen.Bath3); changeURL('/bath3')" >Turn Right</button>
+				<button class="back" ng-click="changeRoom(screen.EmptyFromSink); changeURL('/emptyfromsink')" >Turn Back</button>
+			</div>

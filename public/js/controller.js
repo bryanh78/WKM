@@ -7,6 +7,8 @@ angular.module("game")
 			var s = $scope
 			// var h = $http
 			// s.activeRooms = "mainScreen"
+			s.code = []
+			s.scarable = true
 			s.level = "img"
 			s.place = []
 			s.person = []
@@ -21,6 +23,122 @@ angular.module("game")
 			s.piano = $('#piano')[0]
 			s.screen = scaryFactor.screen
 			s.items = scaryFactor.items
+
+			s.ghostChance = function() {
+				if (s.scarable===true){
+					var timer = Math.random()
+					if (s.level==='img'){
+						if (0<timer&&timer<0.2){
+							s.ghostActive()
+						}
+					} else if (s.level==='img2'){
+						if (0<timer&&timer<0.4){
+							s.ghostActive()
+						}
+					}
+				}
+			}
+
+			s.ghostActive = function() {
+					var timer = Math.random()
+					if (0<timer&&timer<0.33) {
+						s.dadGhost()
+						s.scarable = false
+						return s.scarable
+					} else if (0.34<timer&&timer<0.66) {
+						s.momGhost()
+						s.scarable = false
+						return s.scarable
+					} else if (0.67<timer&&timer<1) {
+						s.childGhost()
+						s.scarable = false
+						return s.scarable
+					}
+			}
+
+			s.dadGhost = function() {
+				s.hidehole = true
+				s.dad = true
+				$timeout(function() {
+					if (s.hiding) {
+						s.hidehole = false
+						s.scarable = true
+						// s.somesound.play()
+						return s.scarable
+					} else {
+						s.changeRoom('deathface')
+						s.death.play()
+						$interval.cancel(s.finalSoundsinterval)
+						while (s.person.length > 0) {
+							s.person.pop()
+						}						
+					}
+				}, 28000)
+			}
+
+			s.momGhost = function() {
+				s.hidehole = true
+				s.mom = true
+				$timeout(function() {
+					if (s.hiding==='under') {
+						s.hidehole = false
+						s.scarable =true
+						// s.somesound.play()
+						return s.scarable
+						} else {
+							var neckcheck = false
+							s.person.forEach(function(element) {
+								var index = s.person.indexOf(element)
+								if (element.name==='Necklace') {
+									neckcheck = true
+									s.person.splice(index,1)
+									s.scarable = true
+									return s.scarable
+								}
+							})
+							if (!neckcheck){
+								s.changeRoom('deathface')
+								s.death.play()
+								$interval.cancel(s.finalSoundsinterval)
+								while (s.person.length > 0) {
+									s.person.pop()
+								}
+							}
+						}
+				}, 28000)
+			}
+
+			s.childGhost = function() {
+				s.hidehole = true
+				s.child = true
+				$timeout(function() {
+					if (s.hiding === 'behind') {
+						s.hidehole = false
+						s.scarable =true
+						// s.somesound.play()
+						return s.scarable
+						} else {
+							var bearcheck = false
+							s.person.forEach(function(element) {
+								var index = s.person.indexOf(element)
+								if (element.name==='Teddy Bear') {
+									neckcheck = true
+									s.person.splice(index,1)
+									s.scarable = true
+									return s.scarable
+								}
+							})
+							if (!neckcheck){
+								s.changeRoom('deathface')
+								s.death.play()
+								$interval.cancel(s.finalSoundsinterval)
+								while (s.person.length > 0) {
+									s.person.pop()
+								}
+							}
+						}
+				}, 28000)
+			}
 
 			s.intensifyier = function() {
 				s.level = 'img3'
@@ -46,9 +164,12 @@ angular.module("game")
 			s.codebox = function() {
 				s.codecheck = parseInt(prompt('Please Enter Code'));
 				// console.log(s.codecheck)
-				if (s.codecheck === 175438266) {
+				if (s.codecheck === s.code[0],s.code[1],s.code[2]) {
+					console.log('success')
 					s.changeRoom('freedom')
 					$interval.cancel(s.finalSoundsinterval)
+				} else {
+					console.log('fail')
 				}
 			}
 
@@ -94,7 +215,6 @@ angular.module("game")
 								if (element.name==='Necklace') {
 									neckcheck = true
 									s.person.splice(index,1)
-									console.log('gamejs 61',s.person)
 								}
 							})
 							if (!neckcheck){
@@ -166,7 +286,25 @@ angular.module("game")
 			s.start = function() {
 				// s.changeRoom('door')
 				l.path('/door')
+				s.codeLoad()
 				s.introMusic.pause()
+
+			}
+
+			s.codeLoad = function() {
+				firstCode = []
+				code = Math.random()
+				code2 = code.toString()
+				spliting = code2.split('');
+				spliting.shift()
+				spliting.shift()
+				firstCode.push(spliting[0],spliting[1],spliting[2])
+				firstGroup = firstCode.join('')
+				s.code.push(firstGroup)
+
+				console.log(s.code)
+				// console.log(codeNumbers)
+
 
 			}
 

@@ -1,9 +1,8 @@
-	<img class = "img-responsive house" ng-src = "{{place[0][level]}}">		
-			<!-- vault -->
-			<div class="buttonHolder">
-				<button class="forward" ng-click="changeRoom(screen.Bed); changeURL('/bed')" >Forward</button>
-				<!-- <button class="left" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Left</button> -->
-				<button class="right" ng-click="changeRoom(screen.HallFromUpstairs); changeURL('/hallfromupstairs')" >Right</button>
-				<button class="back" ng-click="changeRoom(screen.UpstairsLeft); changeURL('/upstairsleft')" >Back</button>
+<img class = "img-responsive house" ng-src = "{{place[0][level]}}">		
+
+					<div class="buttonHolder">
+				<button class="forward" ng-click="changeRoom(screen.EmptyFromUpstairs); changeURL('/emptyfromupstairs')" >Forward</button>
+				<button class="left" ng-click="changeRoom(screen.GuestFromHall); changeURL('/guestfromhall')" >Turn Left</button>
+				<!-- <button class="right" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Right</button> -->
+				<button class="back" ng-click="changeRoom(screen.EntertainFromHall); changeURL('/entertainfromhall')" >Turn Back</button>
 			</div>
-				
