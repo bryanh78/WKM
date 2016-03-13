@@ -389,7 +389,8 @@ var items = {
 				firstnote : {
 					name : "Note 1",
 					holding : true,
-					description : "{{code[0]}}",
+					code : [],
+					description : "hello",
 					back : "-U... hmmmm-"
 				},
 				secondnote : {
@@ -416,6 +417,11 @@ var items = {
 				},
 				teddyBear : {
 					name : "Teddy Bear",
+					holding : true,
+					description : "-An old bear being held together by a few strings and what appears to be dried blood. Why do I wnat this?-"
+				},
+				bottle : {
+					name : "Aged Wine",
 					holding : true,
 					description : "-An old bear being held together by a few strings and what appears to be dried blood. Why do I wnat this?-"
 				}

@@ -296,9 +296,7 @@ angular.module("game")
 				code = Math.random()
 				code2 = code.toString()
 				spliting = code2.split('');
-				spliting.shift()
-				spliting.shift()
-				firstCode.push(spliting[0],spliting[1],spliting[2])
+				firstCode.push(spliting[2],spliting[3],spliting[4])
 				firstGroup = firstCode.join('')
 				s.code.push(firstGroup)
 

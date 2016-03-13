@@ -7,3 +7,7 @@
 				<button class="right" ng-click="changeRoom(screen.Dark); changeURL('/dark')" >Turn Right</button>
 				<button class="back" ng-click="changeRoom(screen.DarkRight); changeURL('/darkright')" >Turn Back</button>
 			</div>
+			<!-- thirdnote -->
+				<div ng-show = "supplycheck(person,'Note 3')" class="thirdnote" ng-click="collect(items.thirdnote); endtimes()" data-toggle="modal" data-target=".bs-item-modal-sm"></div>
+
+				 <!-- !supplycheck(person,'Heavy Key') -->

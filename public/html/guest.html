@@ -6,3 +6,5 @@
 				<!-- <button class="right" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Right</button> -->
 				<button class="back" ng-click="changeRoom(screen.SinkFromGuest); changeURL('/sinkfromguest')" >Turn Back</button>
 			</div>
+			<!-- flashlight -->
+				<div ng-show = "supplycheck(person,'Flashlight')" class="flashlight" ng-click="collect(items.flashlight)" data-toggle="modal" data-target=".bs-item-modal-sm"></div>

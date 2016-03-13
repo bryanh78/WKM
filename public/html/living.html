@@ -7,3 +7,6 @@
 				<button class="left" ng-click="changeRoom(screen.SideFromLiving); changeURL('/sidefromliving')" >Turn Left</button>
 				<button class="back" ng-click="changeRoom(screen.MainFromLiving); changeURL('/mainfromliving')" >Turn Back</button>
 			</div>
+			<!-- vaultkey -->
+				<div ng-show = "supplycheck(person,'Heavy Key')" class="vaultkey" ng-click="collect(items.vaultKey)" data-toggle="modal" data-target=".bs-item-modal-sm"></div>
+				<!-- !supplycheck(person,'Small Key') -->
