@@ -1,4 +1,4 @@
-angular.module("game").controller('loginController',['$scope','$http', function($scope,$http){
+angular.module("game").controller('loginController',['$scope','$http','$rootScope', function($scope,$http,$rootScope){
 
         $scope.signup = function(){
             $http({
@@ -7,7 +7,7 @@ angular.module("game").controller('loginController',['$scope','$http', function(
                 data   : $scope.signupForm
             }).then(function(returnData){
                 console.log(returnData)
-                if ( returnData.data.success ) { window.location.href="/profile" }
+                if ( returnData.data.success ) { window.location.href="/#/profile" }
             })
         }
 
@@ -17,7 +17,12 @@ angular.module("game").controller('loginController',['$scope','$http', function(
                 url    : '/login',
                 data   : $scope.loginForm
             }).then(function(returnData){
-                if ( returnData.data.success ) { window.location.href="/profile" } 
+
+                console.log(returnData)
+                if ( returnData.data.success ) {
+                $rootScope.user= returnData.config.data
+                 window.location.href="/#/profile"
+                  } 
                 else { console.log(returnData)}
             })
         }

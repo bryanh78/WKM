@@ -11,6 +11,8 @@ angular.module("game")
 			s.mom=true
 			s.child=true
 			
+			s.under = false
+			s.behind = false
 			s.code = []
 			s.scarable = true
 			s.level = "img"
@@ -27,6 +29,25 @@ angular.module("game")
 			s.piano = $('#piano')[0]
 			s.screen = scaryFactor.screen
 			s.items = scaryFactor.items
+
+			s.leaveHide = function() {
+				// console.log(s.under,"and",s.behind)
+				s.behind = false
+				s.under = false
+				return s.under, s.behind
+			}
+
+			s.Behind = function() {
+				// console.log(s.behind)
+				s.behind = true
+				return s.behind
+			}
+
+			s.Under = function() {
+				// console.log(s.under)
+				s.under = true
+				return s.under
+			}
 
 			s.rescare = function() {
 				s.scarable=true
@@ -70,7 +91,7 @@ angular.module("game")
 				s.hidehole = true
 				s.dad = true
 				$timeout(function() {
-					if (s.hiding) {
+					if (s.behind||s.under) {
 						s.hidehole = false
 						s.dad = false
 						s.scarable = true
@@ -96,7 +117,7 @@ angular.module("game")
 							s.person.pop()
 						}						
 					}
-				}, 1000)
+				}, 11000)
 			}
 
 			s.momGhost = function() {
@@ -104,7 +125,7 @@ angular.module("game")
 				s.hidehole = true
 				s.mom = true
 				$timeout(function() {
-					if (s.hiding==='under') {
+					if (s.under) {
 						s.hidehole = false
 						s.scarable =true
 						// s.somesound.play()
@@ -130,7 +151,7 @@ angular.module("game")
 								}
 							}
 						}
-				}, 1000)
+				}, 11000)
 			}
 
 			s.childGhost = function() {
@@ -138,7 +159,7 @@ angular.module("game")
 				s.hidehole = true
 				s.child = true
 				$timeout(function() {
-					if (s.hiding === 'behind') {
+					if (s.behind) {
 						s.hidehole = false
 						s.scarable =true
 						// s.somesound.play()
@@ -164,7 +185,7 @@ angular.module("game")
 								}
 							}
 						}
-				}, 1000)
+				}, 11000)
 			}
 
 			s.intensifyier = function() {

@@ -25,17 +25,14 @@ var signUp = function(req, res){
 }
 var logIn = function(req, res, next){
 	console.log("arrive at login")
-    // passport.authenticate('local', function(err, user, info) {
-    //     if (err) { return next(err); }
-    //     if (!user) { return res.send({error : 'something went wrong :('}); }
-    //     req.logIn(user, function(err) {
-    //         if (err) { return next(err); }
-    //         return res.send({success:'success'});
-    //     });
-    // })(req, res, next);
     passport.authenticate('local', function(err, user, info) {
-    	console.log("hello", err, user)
-    })
+        if (err) { return next(err); }
+        if (!user) { return res.send({error : 'something went wrong :('}); }
+        req.logIn(user, function(err) {
+            if (err) { return next(err); }
+            return res.send({success:'success'});
+        });
+    })(req, res, next);
   
 }
 

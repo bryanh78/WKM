@@ -1,14 +1,13 @@
-var DB = require('./model/mainmodel.js')
+var DB = require('./models/mainmodel.js')
 var passport = require('passport')
 var LocalStrategy = require('passport-local').Strategy;
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 passport.serializeUser(function(user, done) {
     done(null, user.id);
 });
 passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
+    DB.User.findById(id, function(err, user) {
         done(err, user);
     });
 });
@@ -16,7 +15,7 @@ passport.deserializeUser(function(id, done) {
 var bcrypt = require('bcryptjs')
 passport.use(new LocalStrategy(
     function(username, password, done) {
-        User.findOne({ username: username }, function (err, user) {
+        DB.User.findOne({ username: username }, function (err, user) {
         	console.log("alpha :", user)
             if (err) { return done(err); }
             if (!user) {

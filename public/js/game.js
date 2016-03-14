@@ -3,6 +3,33 @@ angular.module("game", ['ngRoute'])
 angular.module("game")
 	.config(function($routeProvider){
 		$routeProvider
+			.when('/hide1', {
+				templateUrl : '/html/hide1.html'
+			})
+			.when('/hide2', {
+				templateUrl : '/html/hide2.html'
+			})
+			.when('/hide3', {
+				templateUrl : '/html/hide3.html'
+			})
+			.when('/hide4', {
+				templateUrl : '/html/hide4.html'
+			})
+			.when('/hide5', {
+				templateUrl : '/html/hide5.html'
+			})
+			.when('/hide6', {
+				templateUrl : '/html/hide6.html'
+			})
+			.when('/hide7', {
+				templateUrl : '/html/hide7.html'
+			})
+			.when('/hide8', {
+				templateUrl : '/html/hide8.html'
+			})
+			.when('/hide9', {
+				templateUrl : '/html/hide9.html'
+			})
 			.when('/profile', {
 				templateUrl : '/html/profile.html'
 			})

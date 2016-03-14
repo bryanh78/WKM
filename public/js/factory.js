@@ -328,50 +328,55 @@ var screen = {
 					img2 : "../photos/edited/level 2/upstairsleft.jpg",
 					img3 : "../photos/edited/level 3/upstairsleft.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/upstairsleft.jpg",
-					img3 : "../photos/edited/level 3/upstairsleft.jpg"
+				Hide1 : {
+					img :"../photos/edited/normal/dininghide.jpg",
+					img2 : "../photos/edited/level 2/dininghide.jpg",
+					img3 : "../photos/edited/level 3/dininghide.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/upstairsleft.jpg",
-					img3 : "../photos/edited/level 3/upstairsleft.jpg"
+				Hide2 : {
+					img :"../photos/edited/normal/kitchenhide.jpg",
+					img2 : "../photos/edited/level 2/kitchenhide.jpg",
+					img3 : "../photos/edited/level 3/kitchenhide.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/upstairsleft.jpg",
-					img3 : "../photos/edited/level 3/upstairsleft.jpg"
+				Hide3 : {
+					img :"../photos/edited/normal/.jpg",
+					img2 : "../photos/edited/level 2/.jpg",
+					img3 : "../photos/edited/level 3/.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/upstairsleft.jpg",
-					img3 : "../photos/edited/level 3/upstairsleft.jpg"
+				Hide3 : {
+					img :"../photos/edited/normal/.jpg",
+					img2 : "../photos/edited/level 2/.jpg",
+					img3 : "../photos/edited/level 3/.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/mainhall.jpg",
-					img3 : "../photos/edited/level 3/mainhall.jpg"
+				Hide4 : {
+					img :"../photos/edited/normal/.jpg",
+					img2 : "../photos/edited/level 2/.jpg",
+					img3 : "../photos/edited/level 3/.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/mainhall.jpg",
-					img3 : "../photos/edited/level 3/mainhall.jpg"
+				Hide5 : {
+					img :"../photos/edited/normal/.jpg",
+					img2 : "../photos/edited/level 2/.jpg",
+					img3 : "../photos/edited/level 3/.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/mainhall.jpg",
-					img3 : "../photos/edited/level 3/mainhall.jpg"
+				Hide6 : {
+					img :"../photos/edited/normal/.jpg",
+					img2 : "../photos/edited/level 2/.jpg",
+					img3 : "../photos/edited/level 3/.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/mainhall.jpg",
-					img3 : "../photos/edited/level 3/mainhall.jpg"
+				Hide7 : {
+					img :"../photos/edited/normal/.jpg",
+					img2 : "../photos/edited/level 2/.jpg",
+					img3 : "../photos/edited/level 3/.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
-					img2 : "../photos/edited/level 2/mainhall.jpg",
-					img3 : "../photos/edited/level 3/mainhall.jpg"
+				Hide8 : {
+					img :"../photos/edited/normal/.jpg",
+					img2 : "../photos/edited/level 2/.jpg",
+					img3 : "../photos/edited/level 3/.jpg"
+				},
+				Hide9 : {
+					img :"../photos/edited/normal/.jpg",
+					img2 : "../photos/edited/level 2/.jpg",
+					img3 : "../photos/edited/level 3/.jpg"
 				}
 				
 			}

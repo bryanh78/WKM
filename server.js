@@ -4,6 +4,8 @@ var logger = require('morgan');
 // Create Express App Object \\
 var app = express();
 var userCtrl = require('./controllers/usersControl.js')
+var passport = require('passport')
+var passportConfig = require('./passportConfig.js')
 
 
 // Application Configuration \\
@@ -20,12 +22,17 @@ app.sessionMiddleware = session({
   saveUninitialized: true,
 })
 app.use(app.sessionMiddleware)
-
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes \\
 app.get('/', function(req, res){
   res.sendFile('/html/game.html',{root:'./public'})
 });
+
+app.get('/death', function(req, res) {
+  res.sendFile('/html/death.html',{root:'./public'})
+})
 
 app.isAuthenticatedAjax = function(req, res, next){
     // If the current user is logged in...

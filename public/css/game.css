@@ -213,7 +213,7 @@ height: 60%;
 }
 
 .right {
-	background-color: red;
+	background-color: blue;
 	color: white;
 	font-size: 3em;
 	opacity: 0.5;
@@ -226,7 +226,7 @@ height: 60%;
 }
 
 .left {
-	background-color: red;
+	background-color: blue;
 	color: white;
 	font-size: 3em;
 	opacity: 0.5;
@@ -239,7 +239,7 @@ height: 60%;
 }
 
 .back {
-	background-color: red;
+	background-color: blue;
 	color: white;
 	font-size: 3em;
 	opacity: 0.5;
@@ -251,7 +251,7 @@ height: 60%;
 	left: 25%;
 }
 .forward {
-	background-color: red;
+	background-color: blue;
 	color: white;
 	font-size: 3em;
 	opacity: 0.5;
@@ -324,11 +324,21 @@ height: 60%;
 	color: white;
 	top: 5%;
 }
-.options, .start, .header, .hallBackRight, .hallBackLeft, .hallFrontRight, .hallFrontLeft, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
+.options, .start, .header, .hide1, .hide2, .hide3, .hallFrontLeft, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
 	position: absolute;
 }
 .vaultkey, .bear, .bottle, .key, .secondnote, .thirdnote, .necklace, .firstnote, .flashlight {
 	position: absolute;
+}
+.hide2 {
+	bottom: 50%;
+	background-color: red;
+	color: white;
+}
+.hide1 {
+	bottom: 40%;
+	background-color: red;
+	color: white;
 }
 body {
 	background-color: black;
