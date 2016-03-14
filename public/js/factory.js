@@ -4,7 +4,8 @@ angular.module("game")
 
 var screen = {
 				mainScreen : {
-					img : "http://vignette2.wikia.nocookie.net/creepypasta/images/0/01/Creepy_house-wallpaper-1600x900.jpg/revision/latest?cb=20121007054213"
+					img : "http://vignette2.wikia.nocookie.net/creepypasta/images/0/01/Creepy_house-wallpaper-1600x900.jpg/revision/latest?cb=20121007054213",
+					hide : true
 				},
 				Door : {
 					img : "../photos/edited/normal/door.jpg",
@@ -322,8 +323,8 @@ var screen = {
 					img2 : "../photos/edited/level 2/mainfromstairs.jpg",
 					img3 : "../photos/edited/level 3/mainfromstairs.jpg"
 				},
-				UpstairsLeft : {
-					img :"../photos/edited/normal/upstairsleft.jpg",
+				Death : {
+					img :"../photos/edited/normal/death.jpg",
 					img2 : "../photos/edited/level 2/upstairsleft.jpg",
 					img3 : "../photos/edited/level 3/upstairsleft.jpg"
 				},

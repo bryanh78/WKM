@@ -14,7 +14,7 @@ angular.module("game")
 			s.code = []
 			s.scarable = true
 			s.level = "img"
-			s.place = []
+			s.place = [{hide:true}]
 			s.person = []
 			s.selectedThing = []
 			s.introMusic = $('#introMusic')[0]
@@ -77,10 +77,21 @@ angular.module("game")
 						// s.somesound.play()
 						return s.scarable
 					} else {
+						var wineCheck = false
+							s.person.forEach(function(element) {
+								var index = s.person.indexOf(element)
+								if (element.name==='Aged Wine') {
+									neckcheck = true
+									s.person.splice(index,1)
+									s.scarable = true
+									return s.scarable
+								}
+							})
+							if (!wineCheck)
 						// s.changeRoom('deathface')
 						// s.death.play()
 						// $interval.cancel(s.finalSoundsinterval)
-						h.get('/death')
+						window.location.href = '/death'
 						while (s.person.length > 0) {
 							s.person.pop()
 						}						
@@ -113,7 +124,7 @@ angular.module("game")
 								// s.changeRoom('deathface')
 								// s.death.play()
 								// $interval.cancel(s.finalSoundsinterval)
-								h.get('/death')
+								window.location.href = '/death'
 								while (s.person.length > 0) {
 									s.person.pop()
 								}
@@ -147,7 +158,7 @@ angular.module("game")
 								// s.changeRoom('deathface')
 								// s.death.play()
 								// $interval.cancel(s.finalSoundsinterval)
-								h.get('/death')
+								window.location.href = '/death'
 								while (s.person.length > 0) {
 									s.person.pop()
 								}
@@ -204,11 +215,11 @@ angular.module("game")
 			// 	s.clock.play()
 			// }
 
-			// s.retry = function() {
-			// 	s.changeRoom('mainScreen')
-			// 	s.death.pause()
-			// 	s.introMusic.play()
-			// }
+			s.retry = function() {
+				window.location.href = '/'
+				s.death.pause()
+				s.introMusic.play()
+			}
 
 			// s.diningHall = function() {
 			// 	s.changeRoom('mainHall')
@@ -396,6 +407,7 @@ angular.module("game")
 					s.place.pop()
 				}
 				s.place.push(view)
+				// console.log(s.place)
 			}
 			
 

@@ -15,13 +15,17 @@
 </head>
 <body  ng-controller = "scary">
 	<div  class = "container-fluid">
-		<img class = "img-responsive house" ng-src = "{{place[0][level]}}">
-<!-- DEATH -->
-			<div class="buttonHolder">
-				<button class="btn btn-danger back" ng-click="retry()" >RETRY</button>
+<div class="buttonHolder">
+				<div class="headerL">
+					<h1 class="size">LOSE</h1>
+				</div>
+				<img class="house" src="../photos/edited/normal/death.jpeg"><!-- DEATH -->
+				<button class="btn btn-danger retry" ng-click="retry()" >RETRY</button>
 			</div>
 
 			</div>
+		
+			
 	
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>

@@ -3,6 +3,12 @@ angular.module("game", ['ngRoute'])
 angular.module("game")
 	.config(function($routeProvider){
 		$routeProvider
+			.when('/profile', {
+				templateUrl : '/html/profile.html'
+			})
+			.when('/login', {
+				templateUrl : '/html/login.html'
+			})
 			.when('/', {
 				templateUrl : '/html/main.html'
 			})
