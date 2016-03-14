@@ -16,8 +16,9 @@ app.get('/', function(req, res){
   res.sendFile('/html/game.html',{root:'./public'})
 });
 
-
-
+app.get('/death',function(req, res){
+	res.sendFile('death.html', {root : './public/html'})
+})
 
 
 

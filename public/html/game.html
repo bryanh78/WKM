@@ -26,7 +26,7 @@
 			<audio id="death" src="sounds/178058__hugoluman__horrifyingscreams.wav"></audio>
 		<div class = "row">
 				<!-- <img class = "img-responsive house" ng-src = "{{screen[activeRooms].img}}"> -->
-				<div style='height: 900px; width: 960px;'ng-view> </div>
+				<div style='height: 900px; width: 100%; max-width: 960px'ng-view> </div>
 				
 			<div class="dropdown invin">
 				<button id="inventory" type="button" ng-hide = "activeRooms==='mainScreen' || activeRooms === 'deathface'"  aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Inventory
@@ -34,8 +34,8 @@
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="inventory">
 					<li ng-repeat="thing in person">
-						<a href="#" ng-click="interact(thing)" data-toggle="modal" data-target=".bs-example-modal-sm">{{thing.name}}</a>
-						
+						<a ng-click="interact(thing)" data-toggle="modal" data-target=".bs-example-modal-sm">{{thing.name}}</a>
+						<!-- href="#" -->
 					</li>
 				</ul>
 			</div>
@@ -46,7 +46,7 @@
 					<div class="modal-header">
 						<h3 class="modal-title">{{selectedThing.name}}</h3>
 					</div>
-     					 <span ng-show="!flip">{{selectedThing.description}}</span>
+     					 <p ng-show="!flip">{{selectedThing.description}}</p>
      					 <span ng-show="flip">{{selectedThing.back}}</span>
 					<div ng-show="backcheck()" class="modal-footer">
         				<button type="button" ng-show="!flip" ng-click="turn(true)" class="btn btn-primary">Back Side</button>
@@ -66,8 +66,15 @@
     					</div>
   					</div>
 				</div>
-			<!-- key -->
-				
+
+				<div class="modal fade bs-thing-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>testing</p>
+    					</div>
+  					</div>
+				</div>
+
 			
 			
 			
@@ -76,6 +83,7 @@
 			
 			
 			
+	</div>
 	</div>
 	
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>

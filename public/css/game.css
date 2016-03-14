@@ -1,11 +1,208 @@
+p {
+	text-align: center;
+}
+
+.momHFD, .dadHFD, .childHFD, .momLFK, .dadLFK, .childLFK, .momSFO, .dadSFO, .childSFO, .momEFU, .dadEFU, .childEFU, .momB2, .dadB2, .childB2, .momE, .dadE, .childE, .momHFG, .dadHFG, .childHFG, .momUFH, .dadUFH, .childUFH, .momSFB, .dadSFB, .childSFB, .momB, .dadB, .childB, .momBF2, .dadBF2, .childBF2, .childBE{
+	position: absolute;
+}
+.childBE{
+	height: 60%;
+	bottom: 0%;
+	left:20%;
+	/*opacity: .7;*/
+}
+.dadBF2 {
+	height: 30%;
+	bottom: 25%;
+	left: 64%;
+}
+.momBF2 {
+height: 55%;
+	bottom: 20%;
+	left:0%;
+}
+.childBF2 {
+height: 50%;
+	bottom: 0%;
+	left:0%;
+	opacity: .7;
+}
+.dadB {
+	height: 20%;
+	bottom: 32%;
+	left: 24%;
+}
+.momB {
+height: 80%;
+	bottom: 0%;
+	left:60%;
+}
+.childB {
+height: 60%;
+	bottom: 0%;
+	left:10%;
+	opacity: .7;
+}
+.dadSFB {
+	height: 90%;
+	bottom: 0%;
+	left: 0%;
+}
+.momSFB {
+height: 90%;
+	bottom: 0%;
+	right: 0;
+}
+.childSFB {
+height: 50%;
+	bottom: 0%;
+	left:0%;
+	opacity: .7;
+}
+.dadUFH {
+	height: 70%;
+	bottom: 0%;
+	left: 18%;
+}
+.momUFH {
+height: 45%;
+	bottom: 28%;
+	left:49%;
+}
+.childUFH {
+height: 18%;
+	bottom: 43%;
+	left:49%;
+	opacity: .7;
+}
+.dadHFG {
+	height: 50%;
+	bottom: 30%;
+	left: 5%;
+}
+.momHFG {
+height: 80%;
+	bottom: 4%;
+	left:35%;
+}
+.childHFG {
+height: 50%;
+	bottom: 0%;
+	left:0%;
+	opacity: .7;
+}
+.dadE {
+	height: 40%;
+	bottom: 10%;
+	left: 10%;
+}
+.momE {
+height: 70%;
+	bottom: 20%;
+	left:25%;
+}
+.childE {
+	height: 60%;
+	bottom: 0%;
+	left:40%;
+	opacity: .7;
+}
+.dadB2 {
+	height: 30%;
+	bottom: 65%;
+	left: 85%;
+}
+.momB2 {
+height: 60%;
+	bottom: 33%;
+	left:-5%;
+}
+.childB2 {
+height: 80%;
+	bottom: 0%;
+	left:-20%;
+	opacity: .7;
+}
+.dadEFU {
+	height: 40%;
+	bottom: 18%;
+	left: 58%;
+}
+.momEFU {
+height: 60%;
+	bottom: 20%;
+	left:59%;
+}
+.childEFU {
+height: 60%;
+	bottom: 0%;
+	left:0%;
+	opacity: .7;
+}
+.dadSFO {
+	height: 40%;
+	bottom: 16%;
+	left: 34%;
+}
+.momSFO {
+	height: 55%;
+	top: 28%;
+	right:42%;
+}
+.childSFO {
+	height: 60%;
+	bottom: 0%;
+	left:20%;
+	opacity: .7;
+}
+.dadLFK {
+	height: 33%;
+	bottom: 21%;
+	left: 7%;
+}
+.momLFK {
+	height: 55%;
+	top: 12%;
+	right:36%;
+}
+.childLFK {
+	height: 60%;
+	bottom: 10%;
+	left:40%;
+	opacity: .7;
+
+}
+
+.dadHFD {
+	height: 27%;
+	width: 16%;
+	bottom: 23%;
+	left: 25%;
+
+}
+.momHFD {
+	height: 44%;
+	top: 30%;
+	right:17%;
+}
+
+.childHFD{
+	height: 45%;
+	bottom: 10%;
+	left:40%;
+	opacity: .7;
+}
 .buttonHolder{
-	height: 900px;
-	width: 960px;
+	max-height: 900px;
+	max-width: 960px;
+	height: 100%;
+	width: 100%;
 	position: relative;
 	bottom: 100%;
 }
 .forward, .left, .right, .back {
 	position: absolute;
+	z-index: 100;
 }
 
 .right {
@@ -66,10 +263,10 @@
 
 .doorLock {
 	position: absolute;
-	bottom: 25%;
-	left: 10%;
-	height: 7%;
-	width: 5%;
+	bottom: 49%;
+	left: 29%;
+	height: 12%;
+
 }
 
 .btn {
@@ -85,8 +282,10 @@
 }
 */
 .house{
-	width: 960px;
-	height: 900px;
+	max-width: 960px;
+	max-height: 900px;
+	width: 100%;
+	height: 100%;
 	background-size: 100% 100%;
 	position: relative;
 /*	background-color: black;*/
@@ -116,6 +315,9 @@
 .vaultkey, .bear, .bottle, .key, .secondnote, .thirdnote, .necklace, .firstnote, .flashlight {
 	position: absolute;
 }
+body {
+	background-color: black;
+}
 .bottle {
 	background-color: red;
 	height: 9%;
@@ -127,15 +329,15 @@
 	background-color: red;
 	height: 5%;
 	width: 8%;
-	bottom:49%;
+	bottom:47%;
 	left: 45%;
 }
 .firstnote {
 	background-color: red;
-	height: 8%;
-	width: 4%;
-	bottom:64%;
-	left: 33%;
+	height: 9%;
+	width: 5%;
+	bottom:62%;
+	left: 31%;
 }
 .dark {
 	bottom: 500px;
@@ -144,39 +346,39 @@
 .flashlight {
 	background-color: red;
 	height: 4%;
-	width: 7%;
-	bottom: 26%;
-	left:69%;
+	width: 9%;
+	bottom: 24%;
+	left:70%;
 }
 .secondnote {
 	background-color: red;
-	height: 15%;
+	height: 16%;
 	width: 10%;
 	border-radius: 100%;
 	top: 5%;
-	left: 7%;
+	left: 5%;
 }
 .thirdnote {
 	background-color: red;
 	border-top-right-radius: 100%;
 	height: 5%;
-	width: 7%;
-	bottom:40%;
+	width: 8%;
+	bottom:38%;
 	left: 50%;
 }
 .necklace {
 	background-color: red;
 	height: 12%;
-	width: 4%;
-	bottom: 39%;
-	left: 22%;
+	width: 5%;
+	bottom: 37%;
+	left: 21%;
 }
 .vaultkey {
 	background-color: red;
-	height: 17%;
-	width: 23%;
-	bottom: 43%;
-	left: 32%;
+	height: 18%;
+	width: 25%;
+	bottom: 41%;
+	left: 30%;
 }
 .bear {
 	background-color: red;
