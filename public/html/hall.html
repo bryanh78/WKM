@@ -2,9 +2,27 @@
 	<img class = "img-responsive house" ng-src = "{{place[0][level]}}">
 <!-- MAIN HALLWAY -->
 			<div class="buttonHolder">
-				<button class="forward" ng-click="changeRoom(screen.HallFromDoor); changeURL('/hallfromdoor')" >Forward</button>
+				<button class="forward" ng-click="changeRoom(screen.HallFromDoor); changeURL('/hallfromdoor'); ghostChance()" >Forward</button>
 				<button class="left" ng-click="changeRoom(screen.LookUpstairs); changeURL('/lookupstairs')" >Turn Left</button>
 				<button class="right" ng-click="changeRoom(screen.Dining); changeURL('/dining')" >Turn Right</button>
 				<button class="back" ng-click="changeRoom(screen.Door); changeURL('/door') " >Turn Back</button>
+				<div data-toggle="modal" data-target=".bs-fish-modal-sm" class="fish"></div>
+			
+				<div class="modal fade bs-fish-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>Hmmm a fish tank. It looks empty.</p>
+    					</div>
+  					</div>
+				</div>
+				<div data-toggle="modal" data-target=".bs-house-modal-sm" class="general"></div>
+			
+				<div class="modal fade bs-house-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>It seems like a nice place. Still I would like to leave!</p>
+    					</div>
+  					</div>
+				</div>
 			</div>
 			<!-- -->

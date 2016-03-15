@@ -36,4 +36,11 @@ var logIn = function(req, res, next){
   
 }
 
-module.exports = {signUp : signUp, logIn : logIn }
+var score = function(req, res) {
+    user.update({score: req.params.score}, req.body, function(err, updated) {
+        
+    }) 
+
+}
+
+module.exports = {signUp : signUp, logIn : logIn, score :score }

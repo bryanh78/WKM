@@ -34,6 +34,10 @@ app.get('/death', function(req, res) {
   res.sendFile('/html/death.html',{root:'./public'})
 })
 
+app.get('/victory', function(req, res) {
+  res.sendFile('/html/victory.html',{root:'./public'})
+})
+
 app.isAuthenticatedAjax = function(req, res, next){
     // If the current user is logged in...
     if(req.isAuthenticated()){
@@ -44,6 +48,7 @@ app.isAuthenticatedAjax = function(req, res, next){
     res.send({error:'not logged in'});
 }
 
+app.post('/victory', userCtrl.score)
 app.post('/signup', userCtrl.signUp)
 app.post('/login', userCtrl.logIn)
 

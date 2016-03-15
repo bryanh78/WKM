@@ -6,4 +6,31 @@
  -->				<button class="left" ng-click="changeRoom(screen.MainHall); changeURL('/hall')" >Turn Left</button>
 				<button class="right" ng-click="changeRoom(screen.Door); changeURL('/door')" >Turn Right</button>
 				<button class="back" ng-click="changeRoom(screen.LookUpstairs); changeURL('/lookupstairs')" >Turn Back</button>
+				<div data-toggle="modal" data-target=".bs-chairs-modal-sm" class="chairs"></div>
+			
+				<div class="modal fade bs-chairs-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>These chairs are totally fake. Who would have FAKE chairs?!</p>
+    					</div>
+  					</div>
+				</div>
+				<div data-toggle="modal" data-target=".bs-wallcandle-modal-sm" class="wall"></div>
+			
+				<div class="modal fade bs-wallcandle-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>All these decorations seem brand new. Like show room new...</p>
+    					</div>
+  					</div>
+				</div>
+				<div data-toggle="modal" data-target=".bs-diningclock-modal-sm" class="clockdining"></div>
+			
+				<div class="modal fade bs-diningclock-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>What up I gotta big CLOCK! ha... ok seriously how do I get out?</p>
+    					</div>
+  					</div>
+				</div>
 			</div>

@@ -27,5 +27,7 @@ angular.module("game").controller('loginController',['$scope','$http','$rootScop
             })
         }
 
+        
+
 
 }])

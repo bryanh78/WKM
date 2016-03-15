@@ -5,4 +5,21 @@
 				<button class="left" ng-click="changeRoom(screen.Dining2); changeURL('/dining2')" >Turn Left</button>
 				<button class="right" ng-click="changeRoom(screen.BaseDoor); changeURL('/basedoor')" >Turn Right</button>
 				<button class="back" ng-click="changeRoom(screen.HallFromDoor); changeURL('/hallfromdoor'); ghostChance()" >Turn Back</button>
+				<div data-toggle="modal" data-target=".bs-fish-modal-sm" class="fish3"></div>
+			
+				<div class="modal fade bs-fish-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>Hmmm a fish tank. It looks empty.</p>
+    					</div>
+  					</div>
+				</div>
+				<div data-toggle="modal" data-target=".bs-house-modal-sm" class="general"></div>
+				<div class="modal fade bs-house-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>It seems like a nice place. Still I would like to leave!</p>
+    					</div>
+  					</div>
+				</div>
 		</div>

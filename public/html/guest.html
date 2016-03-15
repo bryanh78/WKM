@@ -2,7 +2,7 @@
 
 					<div class="buttonHolder">
 				<!-- <button class="forward" ng-click="changeRoom(screen.UpstairsFromGuest); changeURL('/upstairsfromguest')" >Forward</button> -->
-				<button class="left" ng-click="changeRoom(screen.HallFromGuest); changeURL('/hallfromguest')" >Turn Left</button>
+				<button class="left" ng-click="changeRoom(screen.HallFromGuest); changeURL('/hallfromguest'); ghostChance()" >Turn Left</button>
 				<!-- <button class="right" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Right</button> -->
 				<button class="back" ng-click="changeRoom(screen.SinkFromGuest); changeURL('/sinkfromguest')" >Turn Back</button>
 				<div ng-show = "supplycheck(person,'Flashlight')" class="flashlight" ng-click="collect(items.flashlight)" data-toggle="modal" data-target=".bs-item-modal-sm"></div>

@@ -6,5 +6,6 @@
 				<!-- <button class="left" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Left</button> -->
 				<button class="right" ng-click="changeRoom(screen.BedHall); changeURL('/bedhall')" >Turn Right</button>
 				<button class="back" ng-click="changeRoom(screen.TopFromBed); changeURL('/topfrombed')" >Turn Back</button>
+				<button ng-show="hidehole" class="col-xs-1 col-xs-offset-1 hide1" ng-click="changeRoom(screen.Hide5); changeURL('/hide5'); Under()">HIDE</button>
 				<div ng-show = "supplycheck(person,'Small Key')" class="key" ng-click="collect(items.key)" data-toggle="modal" data-target=".bs-item-modal-sm"></div>
 			</div>

@@ -7,9 +7,9 @@ angular.module("game")
 			var s = $scope
 			// var h = $http
 			// s.activeRooms = "mainScreen"
-			s.dad=true
-			s.mom=true
-			s.child=true
+			// s.dad=false
+			// s.mom=true
+			// s.child=true
 			
 			s.under = false
 			s.behind = false
@@ -19,6 +19,7 @@ angular.module("game")
 			s.place = [{hide:true}]
 			s.person = []
 			s.selectedThing = []
+
 			s.introMusic = $('#introMusic')[0]
 			s.door = $('#door')[0]
 			s.glass = $('#glass')[0]
@@ -27,8 +28,37 @@ angular.module("game")
 			s.run = $('#run')[0]
 			s.death = $('#death')[0]
 			s.piano = $('#piano')[0]
+			s.womenScream = $('#womenScream')[0]
+			s.softSinging = $('#softSinging')[0]
+			s.deamonBreath = $('#deamonBreath')[0]
+			s.bootSteps = $('#bootSteps')[0]
+			s.pianointro = $('#pianointro')[0]
+			s.childLaugh = $('#childLaugh')[0]
+			// s.hiss = $('#hiss')[0]
+			// s.leave = $('#leave')[0]
+
+			
+
 			s.screen = scaryFactor.screen
 			s.items = scaryFactor.items
+
+			s.score = function(oldScore){
+				newScore = oldScore += 1
+
+            h({
+                method : 'POST',
+                url    : '/victory',
+                data   : newScore
+            }).then(function(returnData){
+
+                console.log(returnData)
+                if ( returnData.data.success ) {
+                $rootScope.user= returnData.config.data
+                 // window.location.href="/#/profile"
+                  } 
+                else { console.log(returnData)}
+            })
+        }
 
 			s.leaveHide = function() {
 				// console.log(s.under,"and",s.behind)
@@ -86,10 +116,26 @@ angular.module("game")
 					}
 			}
 
+			s.finalRun = function() {
+				// console.log('dad')
+				s.mom = true
+				s.child = true
+				s.dad = true
+				s.deamonBreath.play()
+				$timeout(function() {
+						window.location.href = '/death'
+						while (s.person.length > 0) {
+							s.person.pop()
+						}						
+					
+				}, 30000)
+			}
+
 			s.dadGhost = function() {
 				console.log('dad')
 				s.hidehole = true
 				s.dad = true
+				s.deamonBreath.play()
 				$timeout(function() {
 					if (s.behind||s.under) {
 						s.hidehole = false
@@ -102,9 +148,12 @@ angular.module("game")
 							s.person.forEach(function(element) {
 								var index = s.person.indexOf(element)
 								if (element.name==='Aged Wine') {
-									neckcheck = true
+									wineCheck = true
+									s.hidehole = false
 									s.person.splice(index,1)
 									s.scarable = true
+									s.dad = false
+									s.glass.play()
 									return s.scarable
 								}
 							})
@@ -117,17 +166,19 @@ angular.module("game")
 							s.person.pop()
 						}						
 					}
-				}, 11000)
+				}, 7000)
 			}
 
 			s.momGhost = function() {
 				console.log('mom')
 				s.hidehole = true
 				s.mom = true
+				s.piano.play()
 				$timeout(function() {
 					if (s.under) {
 						s.hidehole = false
 						s.scarable =true
+						s.mom = false
 						// s.somesound.play()
 						return s.scarable
 						} else {
@@ -136,8 +187,11 @@ angular.module("game")
 								var index = s.person.indexOf(element)
 								if (element.name==='Necklace') {
 									neckcheck = true
+									s.hidehole = false
 									s.person.splice(index,1)
 									s.scarable = true
+									s.mom = false
+									s.glass.play()
 									return s.scarable
 								}
 							})
@@ -151,17 +205,19 @@ angular.module("game")
 								}
 							}
 						}
-				}, 11000)
+				}, 14000)
 			}
 
 			s.childGhost = function() {
 				console.log('child')
 				s.hidehole = true
 				s.child = true
+				s.childLaugh.play()
 				$timeout(function() {
 					if (s.behind) {
 						s.hidehole = false
 						s.scarable =true
+						s.child = false
 						// s.somesound.play()
 						return s.scarable
 						} else {
@@ -170,8 +226,10 @@ angular.module("game")
 								var index = s.person.indexOf(element)
 								if (element.name==='Teddy Bear') {
 									bearcheck = true
+									s.hidehole = false
 									s.person.splice(index,1)
 									s.scarable = true
+									s.child = false
 									return s.scarable
 								}
 							})
@@ -185,15 +243,17 @@ angular.module("game")
 								}
 							}
 						}
-				}, 11000)
+				}, 14000)
 			}
 
 			s.intensifyier = function() {
+				s.music()
 				s.level = 'img3'
 				return s.level
 			}
 
 			s.intensify = function() {
+				s.music()
 				s.level = 'img2'
 				return s.level
 			}
@@ -214,7 +274,7 @@ angular.module("game")
 				// console.log(s.codecheck)
 				if (s.codecheck === s.code[0],s.code[1],s.code[2]) {
 					console.log('success')
-					s.changeRoom('freedom')
+					window.location.href = '/victory'
 					$interval.cancel(s.finalSoundsinterval)
 				} else {
 					console.log('fail')
@@ -239,7 +299,7 @@ angular.module("game")
 			s.retry = function() {
 				window.location.href = '/'
 				s.death.pause()
-				s.introMusic.play()
+				// s.introMusic.play()
 			}
 
 			// s.diningHall = function() {
@@ -314,29 +374,43 @@ angular.module("game")
 			// 		}
 			// 	},32000)
 			// }
+			s.music = function() {
+				s.backgroundInterval = $timeout(function() {
+					if(s.level==="img") {
+						s.pianointro.play()
+					} else if(s.level==="img2") {
+						s.introsound.play()
+					} else {
+						s.run.play()
+					}
+				}, 10)
+			}
 
-			// s.scarySounds = function() {
-			// 	s.scarysoundsinterval = $interval(function(){
-			// 		var timer = Math.random()
-			// 		if (0<timer&&timer<0.15) {
-			// 			s.door.play()
-			// 		} else if (0.16<timer&&timer<0.3) {
-			// 			s.glass.play()
-			// 		} else if (0.31<timer&&timer<0.46) {
-			// 			s.scare.play()
-			// 		}
-			// 	},43000)  
-			// }
+			s.scarySounds = function() {
+				s.scarysoundsinterval = $interval(function(){
+					var timer = Math.random()
+					if (0<timer&&timer<0.15) {
+						s.door.play()
+					} else if (0.16<timer&&timer<0.3) {
+						s.softSinging.play()
+					} else if (0.31<timer&&timer<0.46) {
+						s.scare.play()
+					}
+				},31000)  
+			}
 			s.changeURL = function(local) {
 				l.path(local)
+				s.bootSteps.play()
 			}
 
 			s.start = function() {
 				// s.changeRoom('door')
 				l.path('/door')
+				s.scarySounds()
+				s.music()
+				// s.test()
 				// s.codeLoad()
-				s.introMusic.pause()
-
+				// s.introMusic.pause()
 			}
 
 			s.codeLoad = function() {
@@ -347,7 +421,7 @@ angular.module("game")
 				firstCode.push(spliting[2],spliting[3],spliting[4])
 				firstGroup = firstCode.join('')
 				s.code.push(firstGroup)
-				// s.person.description = s.code[0]
+				console.log(s.code[s.code.length-1])
 				s.findItem()
 				// console.log(s.person[0])
 				// console.log(s.code)

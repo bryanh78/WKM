@@ -11,6 +11,7 @@ p {
 
 .momHFD, .dadHFD, .childHFD, .momLFK, .dadLFK, .childLFK, .momSFO, .dadSFO, .childSFO, .momEFU, .dadEFU, .childEFU, .momB2, .dadB2, .childB2, .momE, .dadE, .childE, .momHFG, .dadHFG, .childHFG, .momUFH, .dadUFH, .childUFH, .momSFB, .dadSFB, .childSFB, .momB, .dadB, .childB, .momBF2, .dadBF2, .childBF2, .childBE{
 	position: absolute;
+	z-index: 0;
 }
 .childBE{
 	height: 60%;
@@ -209,7 +210,6 @@ height: 60%;
 }
 .forward, .left, .right, .back {
 	position: absolute;
-	z-index: 100;
 }
 
 .right {
@@ -324,11 +324,85 @@ height: 60%;
 	color: white;
 	top: 5%;
 }
-.options, .start, .header, .hide1, .hide2, .hide3, .hallFrontLeft, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
+button {
+	z-index: 100;
+}
+.options, .start, .header, .fish3, .fish2, .general, .table, .cupboard, .clockdining, .wall, .chairs, .hide1, .hide2, .hide3, .hide4, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
 	position: absolute;
 }
-.vaultkey, .bear, .bottle, .key, .secondnote, .thirdnote, .necklace, .firstnote, .flashlight {
+.vaultkey, .bear, .bottle, .key, .secondnote, .thirdnote, .necklace, .firstnote, .flashlight, .fish {
 	position: absolute;
+	z-index: 30;
+}
+.fish3 {
+	height: 64%;
+	width: 35%;
+	right: 10%;
+	bottom: 0;
+	/*background-color: red;*/
+}
+.fish2 {
+	height: 65%;
+	width: 20%;
+	/*background-color: red;*/
+	bottom: 0;
+	left: 0;
+}
+.table {
+	height: 60%;
+	width: 70%;
+	right:0;
+	bottom: 0;
+	/*background-color: red;*/
+}
+.cupboard {
+	height: 100%;
+	width: 30%;
+	left: 0;
+	/*background-color: red;*/
+}
+.clockdining {
+	height: 39%;
+	width:9%;
+	/*background-color: red;*/
+	left: 14%;
+	bottom: 38%;
+}
+.wall {
+	height: 30%;
+	width: 16%;
+	/*background-color: red;*/
+	left:45%;
+	top:0%;
+}
+.chairs {
+	height: 40%;
+	width: 55%;
+	/*background-color: red;*/
+	left: 28%;
+	bottom: 24%;
+}
+.general {
+	height: 100%;
+	width: 100%;
+}
+.fish {
+	z-index: 10;
+	height: 33%;
+	width: 10%;
+	/*background-color: red;*/
+	left:37%;
+	bottom: 30%;
+}
+.hide4 {
+	bottom: 60%;
+	background-color: red;
+	color: white;
+}
+.hide3 {
+	bottom: 50%;
+	background-color: red;
+	color: white;
 }
 .hide2 {
 	bottom: 50%;

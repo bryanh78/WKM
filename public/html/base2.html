@@ -5,10 +5,10 @@
 				<button class="forward" ng-click="changeRoom(screen.DarkDoor); changeURL('/darkdoor')" >Forward</button>
 				<!-- <button class="left" ng-click="changeRoom(screen.DarkDoor); changeURL('/darkdoor')" >Left</button> -->
 				<!-- <button class="right" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Right</button> -->
-				<button class="back" ng-click="changeRoom(screen.BaseFrom2); changeURL('/basefrom2')" >Turn Back</button>
+				<button class="back" ng-click="changeRoom(screen.BaseFrom2); changeURL('/basefrom2'); ghostChance()" >Turn Back</button>
 				<!-- bear -->
 				<div ng-show = "supplycheck(person,'Teddy Bear')" class="bear" ng-click="collect(items.teddyBear)" data-toggle="modal" data-target=".bs-item-modal-sm"></div>
+				<button ng-show="hidehole" class="col-xs-1 col-xs-offset-4 hide4" ng-click="changeRoom(screen.Hide4); changeURL('/hide4'); Behind()">HIDE</button>
 				</div>
 			</div>
 			
-				

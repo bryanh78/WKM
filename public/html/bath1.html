@@ -2,8 +2,10 @@
 
 			<div class="buttonHolder">
 				<!-- <button class="forward" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Forward</button> -->
-				<button class="left" ng-click="changeRoom(screen.SideFromOffice); changeURL('/sidefromoffice')" >Turn Left</button>
+				<button class="left" ng-click="changeRoom(screen.SideFromOffice); changeURL('/sidefromoffice'); ghostChance()" >Turn Left</button>
 				<button class="right" ng-click="changeRoom(screen.Office); changeURL('/office')" >Turn Right</button>
 				<!-- <button class="back" ng-click="changeRoom(screen.SideFromOffice); changeURL('/sidefromoffice')" >Back</button> -->
+				<button ng-show="hidehole" class="col-xs-1 col-xs-offset-8 hide2" ng-click="changeRoom(screen.Hide10); changeURL('/hide10'); Under()">HIDE</button>
 
 			</div>
+			

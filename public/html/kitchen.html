@@ -5,8 +5,8 @@
 				<!-- <button class="forward" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Forward</button> -->
 				<!-- <button class="left" ng-click="changeRoom(screen.Kitchen2); changeURL('/kitchen2')" >Left</button> -->
 				<!-- <button class="right" ng-click="changeRoom(screen.HallFromLiving); changeURL('/hallfromliving')" >Right</button> -->
-				<button class="back" ng-click="changeRoom(screen.ViewFromKitchen); changeURL('/viewfromkitchen')" >Turn Back</button>
-				<button class="col-xs-1 col-xs-offset-5 hide2" ng-click="changeRoom(screen.Hide2); changeURL('/hide2'); Behind()">HIDE</button>
+				<button class="back" ng-click="changeRoom(screen.ViewFromKitchen); changeURL('/viewfromkitchen'); ghostChance()" >Turn Back</button>
+				<button ng-show="hidehole" class="col-xs-1 col-xs-offset-5 hide2" ng-click="changeRoom(screen.Hide2); changeURL('/hide2'); Behind()">HIDE</button>
 				<div ng-show = "supplycheck(person,'Note 1')" class="firstnote" ng-click="collect(items.firstnote); codeLoad()" data-toggle="modal" data-target=".bs-item-modal-sm"></div>
 			</div>
 			

@@ -4,6 +4,7 @@
 				<button class="forward" ng-click="changeRoom(screen.Bed); changeURL('/bed')" >Forward</button>
 				<!-- <button class="left" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Left</button> -->
 				<!-- <button class="right" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Right</button> -->
-				<button class="back" ng-click="changeRoom(screen.Bath2); changeURL('/bath2')" >Turn Back</button>
+				<button ng-show="hidehole" class="col-xs-1 col-xs-offset-10 hide2" ng-click="changeRoom(screen.Hide6); changeURL('/hide6'); Behind()">HIDE</button>
+				<button class="back" ng-click="changeRoom(screen.Bath2); changeURL('/bath2'); ghostChance()" >Turn Back</button>
 			</div>
 				

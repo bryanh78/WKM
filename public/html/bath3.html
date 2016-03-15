@@ -5,4 +5,5 @@
 				<button class="left" ng-click="changeRoom(screen.GuestFromSink); changeURL('/guestfromsink')" >Turn Left</button>
 				<button class="right" ng-click="changeRoom(screen.EmptyFromSink); changeURL('/emptyfromsink')" >Turn Right</button>
 				<button class="back" ng-click="changeRoom(screen.Sink); changeURL('/sink')" >Turn Back</button>
+				<button ng-show="hidehole" class="col-xs-1 col-xs-offset-6 hide2" ng-click="changeRoom(screen.Hide8); changeURL('/hide8'); Behind()">HIDE</button>
 			</div>

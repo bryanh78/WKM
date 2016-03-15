@@ -6,8 +6,28 @@
 				<button class="right" ng-click="changeRoom(screen.KitchenFromLiving); changeURL('/kitchenfromliving')" >Turn Right</button>
 				<button class="left" ng-click="changeRoom(screen.SideFromLiving); changeURL('/sidefromliving')" >Turn Left</button>
 				<button class="back" ng-click="changeRoom(screen.MainFromLiving); changeURL('/mainfromliving')" >Turn Back</button>
-								<div ng-show = "supplycheck(person,'Heavy Key')" class="vaultkey" ng-click="collect(items.vaultKey)" data-toggle="modal" data-target=".bs-item-modal-sm"></div>
+								<div ng-show = "supplycheck(person,'Heavy Key') && !supplycheck(person,'Small Key')" style="z-index: 2" class="vaultkey" ng-click="collect(items.vaultKey)" data-toggle="modal" data-target=".bs-item-modal-sm"></div>
+								<div style="z-index: 1" class="vaultkey" data-toggle="modal" data-target=".bs-thing-modal-sm"></div>
+				<div class="modal fade bs-thing-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>It appears to be locked. I should find the key.</p>
+    					</div>
+  					</div>
+				</div>
+
 			</div>
 			<!-- vaultkey -->
 
+				
 				<!-- !supplycheck(person,'Small Key') -->
+
+				<!-- <div data-toggle="modal" data-target=".bs-thing-modal-sm" class="">
+			
+				<div class="modal fade bs-thing-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>It appears to be locked. I should find the key.</p>
+    					</div>
+  					</div>
+				</div> -->

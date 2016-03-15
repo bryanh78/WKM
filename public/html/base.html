@@ -6,8 +6,12 @@
 				<!-- <button class="forward" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Forward</button> -->
 				<button class="forward" ng-click="changeRoom(screen.Base2); changeURL('/base2')" >Forward</button>
 				<!-- <button class="right" ng-click="changeRoom(screen.mainHall3); changeURL('/living')" >Right</button> -->
-				<button class="left" ng-click="changeRoom(screen.StairsFromBase); changeURL('/stairsfrombase')" >Turn Left</button>
+				<button class="left" ng-click="changeRoom(screen.StairsFromBase); changeURL('/stairsfrombase'); ghostChance()" >Turn Left</button>
+				<button ng-show="hidehole" class="col-xs-1 col-xs-offset-5 hide3" ng-click="changeRoom(screen.Hide3); changeURL('/hide3'); Under()">HIDE</button>
+				</div>
 				<img ng-show="dad" class="dadB" src="../photos/edited/stuff/dad.png">
 				<img ng-show="mom" class="momB" src="../photos/edited/stuff/mom.png">
 				<img ng-show="child" class="childB" src="../photos/edited/stuff/child.png">
 			</div>
+
+			<!--   -->

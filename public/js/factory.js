@@ -153,11 +153,6 @@ var screen = {
 					img2 : "../photos/edited/level 2/bathfromentertain.jpg",
 					img3 : "../photos/edited/level 3/bathfromentertain.jpg"
 				},
-				EntertainBathHide : {
-					img :"../photos/edited/normal/entertainbathhide.jpg",
-					img2 : "../photos/edited/level 2/entertainbathhide.jpg",
-					img3 : "../photos/edited/level 3/entertainbathhide.jpg"
-				},
 				Entertain : {
 					img :"../photos/edited/normal/entertainroom.jpg",
 					img2 : "../photos/edited/level 2/entertainroom.jpg",
@@ -344,39 +339,44 @@ var screen = {
 					img3 : "../photos/edited/level 3/.jpg"
 				},
 				Hide3 : {
-					img :"../photos/edited/normal/.jpg",
-					img2 : "../photos/edited/level 2/.jpg",
-					img3 : "../photos/edited/level 3/.jpg"
+					img :"../photos/edited/normal/basehide1.jpg",
+					img2 : "../photos/edited/level 2/basehide1.jpg",
+					img3 : "../photos/edited/level 3/basehide1.jpg"
 				},
 				Hide4 : {
-					img :"../photos/edited/normal/.jpg",
-					img2 : "../photos/edited/level 2/.jpg",
-					img3 : "../photos/edited/level 3/.jpg"
+					img :"../photos/edited/normal/basehide2.jpg",
+					img2 : "../photos/edited/level 2/basehide2.jpg",
+					img3 : "../photos/edited/level 3/basehide2.jpg"
 				},
 				Hide5 : {
-					img :"../photos/edited/normal/.jpg",
-					img2 : "../photos/edited/level 2/.jpg",
-					img3 : "../photos/edited/level 3/.jpg"
+					img :"../photos/edited/normal/bedhide1.jpg",
+					img2 : "../photos/edited/level 2/bedhide1.jpg",
+					img3 : "../photos/edited/level 3/bedhide1.jpg"
 				},
 				Hide6 : {
-					img :"../photos/edited/normal/.jpg",
-					img2 : "../photos/edited/level 2/.jpg",
-					img3 : "../photos/edited/level 3/.jpg"
+					img :"../photos/edited/normal/bedhide2.jpg",
+					img2 : "../photos/edited/level 2/bedhide2.jpg",
+					img3 : "../photos/edited/level 3/bedhide2.jpg"
 				},
 				Hide7 : {
-					img :"../photos/edited/normal/.jpg",
-					img2 : "../photos/edited/level 2/.jpg",
-					img3 : "../photos/edited/level 3/.jpg"
+					img :"../photos/edited/normal/entertainbathhide.jpg",
+					img2 : "../photos/edited/level 2/entertainbathhide.jpg",
+					img3 : "../photos/edited/level 3/entertainbathhide.jpg"
 				},
 				Hide8 : {
-					img :"../photos/edited/normal/.jpg",
-					img2 : "../photos/edited/level 2/.jpg",
-					img3 : "../photos/edited/level 3/.jpg"
+					img :"../photos/edited/normal/bath3hide.jpg",
+					img2 : "../photos/edited/level 2/bath3hide.jpg",
+					img3 : "../photos/edited/level 3/bath3hide.jpg"
 				},
 				Hide9 : {
-					img :"../photos/edited/normal/.jpg",
-					img2 : "../photos/edited/level 2/.jpg",
-					img3 : "../photos/edited/level 3/.jpg"
+					img :"../photos/edited/normal/officehide.jpg",
+					img2 : "../photos/edited/level 2/officehide.jpg",
+					img3 : "../photos/edited/level 3/officehide.jpg"
+				},
+				Hide10 : {
+					img :"../photos/edited/normal/bath1hide.jpg",
+					img2 : "../photos/edited/level 2/bath1hide.jpg",
+					img3 : "../photos/edited/level 3/bath1hide.jpg"
 				}
 				
 			}
@@ -385,7 +385,7 @@ var items = {
 				key : {
 					name : "Small Key",
 					holding : true,
-					description : "-A small, simply designed key. It wouldn't be used for a safe. I wonder what it's for...-"
+					description : "-A small, simply designed key. It wouldn't be used for a door. I wonder what it's for...-"
 				},
 				flashlight : {
 					name : "Flashlight",
@@ -419,7 +419,7 @@ var items = {
 				vaultKey : {
 					name : "Heavy Key",
 					holding : true,
-					description : "-Now this is a key! I must be to something big.-"
+					description : "-Now this is a key! I must be to the door.-"
 				},
 				teddyBear : {
 					name : "Teddy Bear",
@@ -429,7 +429,7 @@ var items = {
 				bottle : {
 					name : "Aged Wine",
 					holding : true,
-					description : "-An old bear being held together by a few strings and what appears to be dried blood. Why do I wnat this?-"
+					description : "-An old red. maybe a Cab... who knows Im sure it is gonna be good.-"
 				}
 			}
 
