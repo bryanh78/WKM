@@ -327,18 +327,26 @@ height: 60%;
 button {
 	z-index: 100;
 }
-.options, .start, .header, .fish3, .fish2, .general, .table, .cupboard, .clockdining, .wall, .chairs, .hide1, .hide2, .hide3, .hide4, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
+.options, .start, .header,.livingview, .fish3, .fish2, .general, .table, .cupboard, .clockdining, .wall, .chairs, .hide1, .hide2, .hide3, .hide4, .invin, .stairsup, .stairsdown, .basementvault, .basementfurnace, .secondfloor, .secondfloorbackleft, .secondfloorbackright, .secondfloorright, .secondfloorleft, .dark, .libraryright, .kitchenleft, .diningright, .kitchenhide, .basementhide, .bedroomhide {
 	position: absolute;
 }
 .vaultkey, .bear, .bottle, .key, .secondnote, .thirdnote, .necklace, .firstnote, .flashlight, .fish {
 	position: absolute;
 	z-index: 30;
 }
+.livingview {
+	height: 25%;
+	width: 37%;
+	bottom: 35%;
+	left: 18%;
+	/*background-color: red;*/
+}
 .fish3 {
 	height: 64%;
 	width: 35%;
 	right: 10%;
 	bottom: 0;
+	z-index: 10;
 	/*background-color: red;*/
 }
 .fish2 {
@@ -418,21 +426,21 @@ body {
 	background-color: black;
 }
 .bottle {
-	background-color: red;
+	/*background-color: red;*/
 	height: 9%;
 	width: 2%;
 	top: 4%;
 	left: 11%;
 }
 .key {
-	background-color: red;
+	/*background-color: red;*/
 	height: 5%;
 	width: 8%;
 	bottom:47%;
 	left: 45%;
 }
 .firstnote {
-	background-color: red;
+	/*background-color: red;*/
 	height: 9%;
 	width: 5%;
 	bottom:62%;
@@ -443,14 +451,14 @@ body {
 	color: white;
 }
 .flashlight {
-	background-color: red;
+	/*background-color: red;*/
 	height: 4%;
 	width: 9%;
 	bottom: 24%;
 	left:70%;
 }
 .secondnote {
-	background-color: red;
+	/*background-color: red;*/
 	height: 16%;
 	width: 10%;
 	border-radius: 100%;
@@ -458,7 +466,7 @@ body {
 	left: 5%;
 }
 .thirdnote {
-	background-color: red;
+	/*background-color: red;*/
 	border-top-right-radius: 100%;
 	height: 5%;
 	width: 8%;
@@ -466,21 +474,21 @@ body {
 	left: 50%;
 }
 .necklace {
-	background-color: red;
+	/*background-color: red;*/
 	height: 12%;
 	width: 5%;
 	bottom: 37%;
 	left: 21%;
 }
 .vaultkey {
-	background-color: red;
+	/*background-color: red;*/
 	height: 18%;
 	width: 25%;
 	bottom: 41%;
 	left: 30%;
 }
 .bear {
-	background-color: red;
+	/*background-color: red;*/
 	height: 11%;
 	width: 5%;
 	bottom: 51%;

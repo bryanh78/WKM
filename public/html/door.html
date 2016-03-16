@@ -6,6 +6,15 @@
 				<button class="right" ng-click="changeRoom(screen.LookUpstairs); changeURL('/lookupstairs')" >Turn Right</button>
 				<button class="back" ng-click="changeRoom(screen.MainHall); changeURL('/hall')" >Turn Back</button>
 				<img class="doorLock" ng-click="codebox()" ng-src = "../photos/edited/stuff/doorLock.png"/>
+				<div data-toggle="modal" data-target=".bs-frontdoor-modal-sm" class="general"></div>
+			
+				<div class="modal fade bs-frontdoor-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+   						<div class="modal-content">
+     						<p>This door is solid... It says it takes a 9 digit code.</p>
+    					</div>
+  					</div>
+				</div>
 				
 <!-- firstnote -->
 		</div>
