@@ -376,7 +376,7 @@ angular.module("game")
 					if(s.level==="img") {
 						s.pianointro.play()
 					} else if(s.level==="img2") {
-						s.introsound.play()
+						s.introMusic.play()
 					} else {
 						s.run.play()
 					}
