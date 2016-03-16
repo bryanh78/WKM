@@ -4,7 +4,7 @@ angular.module("game")
 
 var screen = {
 				mainScreen : {
-					img : "http://vignette2.wikia.nocookie.net/creepypasta/images/0/01/Creepy_house-wallpaper-1600x900.JPG/revision/latest?cb=20121007054213",
+					img : "http://vignette2.wikia.nocookie.net/creepypasta/images/0/01/Creepy_house-wallpaper-1600x900.jpg/revision/latest?cb=20121007054213",
 					hide : true
 				},
 				Door : {
