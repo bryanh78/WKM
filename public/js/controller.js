@@ -247,13 +247,11 @@ angular.module("game")
 			}
 
 			s.intensifyier = function() {
-				s.music()
 				s.level = 'img3'
 				return s.level
 			}
 
 			s.intensify = function() {
-				s.music()
 				s.level = 'img2'
 				return s.level
 			}
@@ -375,7 +373,6 @@ angular.module("game")
 			// 	},32000)
 			// }
 			s.music = function() {
-				s.backgroundInterval = $timeout(function() {
 					if(s.level==="img") {
 						s.pianointro.play()
 					} else if(s.level==="img2") {
@@ -383,7 +380,6 @@ angular.module("game")
 					} else {
 						s.run.play()
 					}
-				}, 10)
 			}
 
 			s.scarySounds = function() {
